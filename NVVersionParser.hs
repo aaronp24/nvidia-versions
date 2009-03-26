@@ -25,7 +25,7 @@ versionFields (Version verStr) =
     let Right fields = parse verParser "Version string" verStr
         in fields
  where
-    verParser = sepBy1 number (char '.')
+    verParser = sepBy1 number (oneOf ".-")
     number = many1 digit >>= return . read
 
 instance Ord Version where
