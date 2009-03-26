@@ -4,9 +4,9 @@ import Data.List
 
 -- Data type
 
-data Branch = Current | R173_14 | L9622 | L7160 | Unrecognized String
+data Branch = Unrecognized String | L7160 | L9622 | R173_14 | Current
   deriving (Show, Eq, Ord)
-data Maturity = Beta | Prerelease | Official
+data Maturity = Official | Prerelease | Beta
   deriving (Show, Eq, Ord)
 newtype Version = Version String
   deriving Eq
