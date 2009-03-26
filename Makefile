@@ -1,10 +1,12 @@
 validate: .validate-stamp
+stuff: .validate-stamp generate-stuff
+	@./generate-stuff
 upload: .upload-stamp
 
 clean::
-	$(RM) .upload-stamp .validate-stamp validate-versions *.o *.hi
+	$(RM) .upload-stamp .validate-stamp validate-versions generate-stuff *.o *.hi
 
-.PHONY: upload clean validate
+.PHONY: validate stuff upload clean
 
 upload_files := nvidia-versions.txt
 
@@ -17,4 +19,7 @@ upload_files := nvidia-versions.txt
 	@touch $@
 
 validate-versions: NVVersionParser.hs validate-versions.hs
+	ghc --make $@
+
+generate-stuff: NVVersionParser.hs generate-stuff.hs
 	ghc --make $@

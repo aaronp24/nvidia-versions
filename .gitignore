@@ -1,6 +1,7 @@
 .upload-stamp
 .validate-stamp
 validate-versions
+generate-stuff
 *.swp
 *.o
 *.hi
