@@ -21,5 +21,5 @@ upload_files := nvidia-versions.txt
 validate-versions: NVVersionParser.hs validate-versions.hs
 	ghc --make $@
 
-generate-stuff: NVVersionParser.hs generate-stuff.hs
+generate-stuff: NVVersionParser.hs generate-stuff.hs URLs.hs
 	ghc --make $@

@@ -1,5 +1,6 @@
 module Main where
 import NVVersionParser
+import URLs
 import Data.Map(Map)
 import qualified Data.Map as Map
 import Control.Monad
@@ -12,24 +13,6 @@ toMap versions =
     Map.fromList (map split versions)
  where
     split (Driver br mat ver) = ((br, mat), ver)
-
--- A map from version numbers to nvnews announcements.
-urlMap = Map.fromList [
-    (Version "180.29", "http://www.nvnews.net/vbulletin/showthread.php?t=127873"),
-    (Version "180.41", "http://www.nvnews.net/vbulletin/showthread.php?p=1963540"),
-    (Version "185.13", "http://www.nvnews.net/vbulletin/showthread.php?p=1957328"),
-    (Version "96.43.11", "http://www.nvnews.net/vbulletin/showthread.php?t=128942"),
-    (Version "71.86.09", "http://www.nvnews.net/vbulletin/showthread.php?t=129639")
- ]
-
--- A map from version numbers to Linux-x86 and Linux-x86_64 official
--- release pages.
-releaseUrlMap = Map.fromList [
-    (Version "180.29", ("http://www.nvidia.com/object/linux_display_ia32_180.29.html", "http://www.nvidia.com/object/linux_display_amd64_180.29.html")),
-    (Version "173.14.18", ("http://www.nvidia.com/object/linux_display_ia32_173.14.18.html", "http://www.nvidia.com/object/linux_display_amd64_173.14.18.html")),
-    (Version "96.43.11", ("http://www.nvidia.com/object/linux_display_x86_96.43.11.html", "http://www.nvidia.com/object/linux_display_amd64_96.43.11.html")),
-    (Version "71.86.09", ("http://www.nvidia.com/object/linux_display_x86_71.86.09.html", "http://www.nvidia.com/object/linux_display_amd64_71.86.09.html"))
- ]
 
 whenM (Just v) f = f v
 whenM Nothing _ = return ()
@@ -52,16 +35,16 @@ linkTo url str = linkTag url ++ str ++ "[/url]"
 
 -- Print a version line in the form
 --   name: ver (x86 / x86_64)
--- "ver" is a link to the nvnews post if one is found in the urlMap
--- table.  "x86" and "x86_64" are links to the nvidia.com official
+-- "ver" is a link to the nvnews post if one is found in the nvnews
+-- URL map.  "x86" and "x86_64" are links to the nvidia.com official
 -- release pages, and are only output if the version is found in the
--- releaseUrlMap.
+-- nvidia URL map.
 printVerLine verMap name key =
     doLookup key verMap (\ver -> do
         putStr name
         putStr ": "
-        doWithUrl ver urlMap (putStr (show ver))
-        doLookup ver releaseUrlMap (\(x86, x86_64) -> do
+        doWithUrl ver nvnewsUrls (putStr (show ver))
+        doLookup ver nvidiaUrls (\(x86, x86_64) -> do
             putStr $ " (" ++ (linkTo x86 "x86") ++ " / " ++
                              (linkTo x86_64 "x86_64") ++ ")"
          )
