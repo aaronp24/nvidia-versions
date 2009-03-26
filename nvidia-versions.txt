@@ -1,0 +1,17 @@
+# NVIDIA driver versions
+#
+# When parsing this file, please be aware that new columns and new branches may
+# be added at any time.  While I don't envision ever doing it, it's possible
+# that I might add a new value for the maturity column as well.
+#
+# PLEASE NOTE that this file is *unofficial* and NVIDIA Corporation and Aaron
+# Plattner do not guarantee the accuracy of its contents.
+#
+# branch maturity version
+current official 180.29
+current prerelease 180.41
+current beta 185.13
+opengl3 beta 180.37.04
+173.14 official 173.14.18
+96.43 official 96.43.11
+71.86 official 71.86.09
