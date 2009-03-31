@@ -14,6 +14,7 @@ nvnewsThread ver thread =
 nvnewsUrls = fromList [
     nvnews "180.29"                     1927376,
     nvnews "180.41"                     1963540,
+    nvnews "180.44"                     1971469,
     nvnews "185.13"                     1957328,
     nvnews "96.43.11"                   1941228,
     nvnews "71.86.09"                   1951145,
@@ -122,6 +123,7 @@ nvidia foo ver =
 
 nvidiaUrls = fromList [
     nvidia "ia32"           "180.29",
+    nvidia "ia32"           "180.44",
     nvidia "ia32"           "173.14.18",
     nvidia "x86"            "96.43.11",
     nvidia "x86"            "71.86.09"
