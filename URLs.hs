@@ -15,6 +15,8 @@ nvnewsUrls = fromList [
     nvnews "180.29"                     1927376,
     nvnews "180.41"                     1963540,
     nvnews "180.44"                     1971469,
+    nvnews "180.50"                     1984723,
+    nvnews "180.51"                     1985816,
     nvnews "185.13"                     1957328,
     nvnews "185.19"                     1976912,
     nvnews "96.43.11"                   1941228,
