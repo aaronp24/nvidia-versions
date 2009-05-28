@@ -9,8 +9,7 @@
 #
 # branch maturity version
 current official 180.51
-current prerelease 180.60
-current beta 185.18.10
+current prerelease 185.18.14
 opengl3 beta 180.37.05
 173.14 official 173.14.18
 96.43 official 96.43.11
