@@ -25,6 +25,9 @@ nvnewsUrls = fromList [
     nvnews "185.18.08"                  1997862,
     nvnews "185.18.10"                  2009649,
     nvnews "185.18.14"                  2016740,
+    -- 190.16 had OpenGL 3.2 enabled prematurely and was removed.
+    -- nvnews "190.16"                     2051461,
+    nvnews "190.18"                     2053084,
     nvnews "173.14.19"                  2034418,
     nvnews "173.14.20"                  2037374,
     nvnews "96.43.11"                   1941228,
@@ -144,6 +147,8 @@ nvidiaUrls = fromList [
     nvidia "ia32"           "173.14.18",
     nvidia "ia32"           "185.18.10",
     nvidia "ia32"           "185.18.14",
+    -- nvidia "ia32"           "190.16",
+    nvidia "ia32"           "190.18",
     nvidia "x86"            "96.43.11",
     nvidia "x86"            "71.86.09"
  ]
