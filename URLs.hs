@@ -30,6 +30,7 @@ nvnewsUrls = fromList [
     -- 190.16 had OpenGL 3.2 enabled prematurely and was removed.
     -- nvnews "190.16"                     2051461,
     nvnews "190.18"                     2053084,
+    nvnews "190.18.03"                  2060387,
     nvnews "173.14.19"                  2034418,
     nvnews "173.14.20"                  2037374,
     nvnews "96.43.11"                   1941228,
