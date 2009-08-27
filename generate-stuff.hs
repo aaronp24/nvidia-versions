@@ -119,4 +119,4 @@ main = do
     printIRCTopic verMap
     putStr " | ftp://download.nvidia.com | DO NOT FLOOD! (use "
     putStr "http://pastebin.com) | try to use your distribution's driver "
-    putStrLn "packages | Ubuntu kernel module problem?  Ask in #ubuntu"
+    putStrLn "packages | Have you tried nvidia-settings?"
