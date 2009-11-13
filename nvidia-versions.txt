@@ -9,9 +9,8 @@
 #
 # branch maturity version
 current official 190.42
-173.14 prerelease 173.14.20
-173.14 official 173.14.18
-96.43 prerelease 96.43.13
-96.43 official 96.43.11
-71.86 prerelease 71.86.11
-71.86 official 71.86.09
+173.14 prerelease 173.14.22
+173.14 official 173.14.20
+96.43 prerelease 96.43.14
+96.43 official 96.43.13
+71.86 official 71.86.11
