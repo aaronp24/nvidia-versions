@@ -194,6 +194,7 @@ nvidiaUrls = fromList [
     nvidia "ia32"           "173.08",
     nvidia "ia32"           "173.14.18",
     nvidia "ia32"           "173.14.20",
+    nvidia "ia32"           "173.14.22",
     nvidia "ia32"           "177.70.33",
     nvidia "ia32"           "180.29",
     nvidia "ia32"           "180.44",
@@ -211,7 +212,8 @@ nvidiaUrls = fromList [
     nvidia "x86"            "71.86.09",
     nvidia "ia32"           "71.86.11",
     nvidia "x86"            "96.43.11",
-    nvidia "ia32"           "96.43.13"
+    nvidia "ia32"           "96.43.13",
+    nvidia "ia32"           "96.43.14"
  ]
 
 main = do
