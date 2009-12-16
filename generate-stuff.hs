@@ -113,7 +113,7 @@ main = do
     let (_, newest) = Map.findMax verMap
     putStr "Please see [URL=\"ftp://download.nvidia.com/XFree86/Linux-x86/"
     putStr (show newest)
-    putStrLn "/README/appendix-a.html\"]Appendix A[/URL] of the README to determine which driver you need for your GPU."
+    putStrLn "/README/supportedchips.html\"]Appendix A[/URL] of the README to determine which driver you need for your GPU."
 
     putStrLn "====================== IRC topic ======================="
     putStr "/topic "
