@@ -149,12 +149,28 @@ nvidia foo ver =
      ("http://www.nvidia.com/object/linux_display_" ++ foo ++ "_" ++ ver ++ ".html",
       "http://www.nvidia.com/object/linux_display_amd64_" ++ ver ++ ".html"))
 
+ancient ver =
+    (Version ver,
+     ("http://www.nvidia.com/object/linux_display_" ++ ver ++ ".html", "n/a"))
+
+reallyAncient ver =
+    (Version ver,
+     ("http://www.nvidia.com/object/linux_v" ++ ver ++ ".html", "n/a"))
+
 nvidiaUrls = fromList [
     nvidia "ia32"           "100.14.03",
     nvidia "ia32"           "100.14.06",
     nvidia "ia32"           "100.14.09",
     nvidia "ia32"           "100.14.11",
     nvidia "ia32"           "100.14.19",
+    reallyAncient           "1.0-1251",
+    reallyAncient           "1.0-1512",
+    reallyAncient           "1.0-1541",
+    ancient                 "1.0-2313",
+    ancient                 "1.0-2802",
+    ancient                 "1.0-2880",
+    ancient                 "1.0-2960",
+    ancient                 "1.0-3123",
     nvidia "ia32"           "1.0-4191",
     nvidia "ia32"           "1.0-4349",
     nvidia "ia32"           "1.0-4363",
