@@ -144,9 +144,9 @@ nvnewsUrls = fromList [
     nvnews "190.42"             2105790,
     nvnews "190.53"             2141387,
     nvnews "195.22"             2129618,
-    nvnews "195.30"             2149232,
-    nvnews "195.36.03"          2178512,
-    nvnews "195.36.08"          2196696
+    nvnews "195.30"             2149232
+    -- nvnews "195.36.03"          2178512,
+    -- nvnews "195.36.08"          2196696
  ]
 
 nvidia foo ver =
@@ -231,7 +231,7 @@ nvidiaUrls = fromList [
     nvidia "ia32"           "190.53",
     nvidia "ia32"           "195.22",
     nvidia "ia32"           "195.30",
-    nvidia "ia32"           "195.36.08",
+    -- nvidia "ia32"           "195.36.08",
     nvidia "x86"            "71.86.04",
     nvidia "x86"            "71.86.09",
     nvidia "ia32"           "71.86.11",
