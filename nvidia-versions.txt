@@ -10,6 +10,7 @@
 # branch maturity version
 current prerelease 195.36.15
 current official 190.53
+opengl3.3 official 195.36.07.03
 173.14 official 173.14.25
 96.43 official 96.43.16
 71.86 official 71.86.13
