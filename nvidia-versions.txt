@@ -11,5 +11,6 @@
 current official 195.36.15
 opengl3.3 official 195.36.07.04
 173.14 official 173.14.25
+96.43 prerelease 96.43.17
 96.43 official 96.43.16
 71.86 official 71.86.13
