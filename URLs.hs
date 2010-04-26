@@ -150,7 +150,8 @@ nvnewsUrls = fromList [
     nvnews "195.36.08"          2196696,
     nvnews "195.36.07.03"       2212330,
     nvnews "195.36.07.04"       2212330,
-    nvnews "195.36.15"          2209577
+    nvnews "195.36.15"          2209577,
+    nvnews "195.36.24"          2239062
  ]
 
 nvidia foo ver =
