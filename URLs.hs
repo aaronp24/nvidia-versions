@@ -151,7 +151,8 @@ nvnewsUrls = fromList [
     nvnews "195.36.07.03"       2212330,
     nvnews "195.36.07.04"       2212330,
     nvnews "195.36.15"          2209577,
-    nvnews "195.36.24"          2239062
+    nvnews "195.36.24"          2239062,
+    nvnews "256.25"             2255561
  ]
 
 dashes foo ver =
@@ -244,6 +245,7 @@ nvidiaUrls = fromList [
     -- nvidia "ia32"           "195.36.08",
     nvidia "ia32"           "195.36.15",
     dashes "ia32"           "195.36.24",
+    dashes "ia32"           "256.25",
     nvidia "x86"            "71.86.04",
     nvidia "x86"            "71.86.09",
     nvidia "ia32"           "71.86.11",
