@@ -152,7 +152,8 @@ nvnewsUrls = fromList [
     nvnews "195.36.07.04"       2212330,
     nvnews "195.36.15"          2209577,
     nvnews "195.36.24"          2239062,
-    nvnews "256.25"             2255561
+    nvnews "256.25"             2255561,
+    nvnews "256.29"             2260199
  ]
 
 dashes foo ver =
