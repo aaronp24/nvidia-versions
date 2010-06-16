@@ -152,9 +152,15 @@ nvnewsUrls = fromList [
     nvnews "195.36.07.04"       2212330,
     nvnews "195.36.15"          2209577,
     nvnews "195.36.24"          2239062,
+    nvnews "195.36.31"          2271750,
     nvnews "256.25"             2255561,
     nvnews "256.29"             2260199
  ]
+
+dashdv foo ver =
+    (Version ver,
+     ("http://www.nvidia.com/object/linux-display-" ++ foo ++ "-" ++ ver ++ "-driver.html",
+      "http://www.nvidia.com/object/linux-display-amd64-" ++ ver ++ "-driver.html"))
 
 dashes foo ver =
     (Version ver,
@@ -246,6 +252,7 @@ nvidiaUrls = fromList [
     -- nvidia "ia32"           "195.36.08",
     nvidia "ia32"           "195.36.15",
     dashes "ia32"           "195.36.24",
+    dashdv "ia32"           "195.36.31",
     dashes "ia32"           "256.25",
     nvidia "x86"            "71.86.04",
     nvidia "x86"            "71.86.09",
