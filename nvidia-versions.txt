@@ -8,7 +8,7 @@
 # Plattner do not guarantee the accuracy of its contents.
 #
 # branch maturity version
-current beta 256.29
+current beta 256.35
 current official 195.36.31
 opengl3.3 official 195.36.07.04
 173.14 official 173.14.25
