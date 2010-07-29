@@ -108,7 +108,7 @@ main = do
     showBranch verMap "Legacy releases for GeForce 2 through GeForce 4 series GPUs" L9622
     showBranch verMap "Legacy releases for Riva TNT, TNT2, GeForce, and some GeForce 2 GPUs" L7160
 
-    showBranch verMap "OpenGL 3.3" (Unrecognized "opengl3.3")
+    showBranch verMap "OpenGL 4.1" (Unrecognized "opengl4.1")
 
     let (_, newest) = Map.findMax verMap
     putStr "Please see [URL=\"ftp://download.nvidia.com/XFree86/Linux-x86/"
