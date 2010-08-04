@@ -237,6 +237,7 @@ nvidiaUrls = fromList [
     nvidia "ia32"           "173.14.20",
     nvidia "ia32"           "173.14.22",
     nvidia "ia32"           "173.14.25",
+    dashdv "ia32"           "173.14.27",
     nvidia "ia32"           "177.70.33",
     nvidia "ia32"           "180.29",
     nvidia "ia32"           "180.44",
@@ -260,14 +261,17 @@ nvidiaUrls = fromList [
     dashes "ia32"           "256.25",
     dashdv "ia32"           "256.35",
     (Version                "256.38.02", ("http://developer.download.nvidia.com/opengl/4.1/linux/NVIDIA-Linux-x86-256.38.02.run", "http://developer.download.nvidia.com/opengl/4.1/linux/NVIDIA-Linux-x86_64-256.38.02.run")),
+    dashdv "ia32"           "256.44",
     nvidia "x86"            "71.86.04",
     nvidia "x86"            "71.86.09",
     nvidia "ia32"           "71.86.11",
     nvidia "ia32"           "71.86.13",
+    dashdv "ia32"           "71.86.14",
     nvidia "x86"            "96.43.11",
     nvidia "ia32"           "96.43.13",
     nvidia "ia32"           "96.43.14",
-    nvidia "ia32"           "96.43.16"
+    nvidia "ia32"           "96.43.16",
+    dashdv "ia32"           "96.43.18"
 
  ]
 

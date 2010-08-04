@@ -8,11 +8,8 @@
 # Plattner do not guarantee the accuracy of its contents.
 #
 # branch maturity version
-current prerelease 256.44
-current official 256.35
+current official 256.44
 opengl4.1 official 256.38.02
-173.14 prerelease 173.14.27
-173.14 official 173.14.25
-96.43 prerelease 96.43.18
-96.43 official 96.43.16
-71.86 official 71.86.13
+173.14 official 173.14.27
+96.43 official 96.43.18
+71.86 official 71.86.14
