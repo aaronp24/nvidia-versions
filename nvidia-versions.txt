@@ -9,7 +9,7 @@
 #
 # branch maturity version
 current official 256.44
-opengl4.1 official 256.38.02
+opengl4.1 official 256.38.03
 173.14 official 173.14.27
 96.43 official 96.43.18
 71.86 official 71.86.14
