@@ -159,7 +159,8 @@ nvnewsUrls = fromList [
     nvnews "256.29"             2260199,
     nvnews "256.35"             2273450,
     nvnews "256.44"             2295223,
-    nvnews "256.52"             2309077
+    nvnews "256.52"             2309077,
+    nvnews "256.53"             2309077
  ]
 
 dashdv foo ver =
@@ -264,6 +265,7 @@ nvidiaUrls = fromList [
     (Version                "256.38.02", ("http://developer.download.nvidia.com/opengl/4.1/linux/NVIDIA-Linux-x86-256.38.02.run", "http://developer.download.nvidia.com/opengl/4.1/linux/NVIDIA-Linux-x86_64-256.38.02.run")),
     (Version                "256.38.03", ("http://developer.download.nvidia.com/opengl/4.1/linux/NVIDIA-Linux-x86-256.38.03.run", "http://developer.download.nvidia.com/opengl/4.1/linux/NVIDIA-Linux-x86_64-256.38.03.run")),
     dashdv "ia32"           "256.44",
+    dashdv "ia32"           "256.53",
     nvidia "x86"            "71.86.04",
     nvidia "x86"            "71.86.09",
     nvidia "ia32"           "71.86.11",
