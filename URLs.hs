@@ -160,7 +160,8 @@ nvnewsUrls = fromList [
     nvnews "256.35"             2273450,
     nvnews "256.44"             2295223,
     nvnews "256.52"             2309077,
-    nvnews "256.53"             2309077
+    nvnews "256.53"             2309077,
+    nvnews "260.19.04"          2314331
  ]
 
 dashdv foo ver =
