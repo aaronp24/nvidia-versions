@@ -269,6 +269,7 @@ nvidiaUrls = fromList [
     (Version                "256.38.03", ("http://developer.download.nvidia.com/opengl/4.1/linux/NVIDIA-Linux-x86-256.38.03.run", "http://developer.download.nvidia.com/opengl/4.1/linux/NVIDIA-Linux-x86_64-256.38.03.run")),
     dashdv "ia32"           "256.44",
     dashdv "ia32"           "256.53",
+    dashdv "ia32"           "260.19.12",
     nvidia "x86"            "71.86.04",
     nvidia "x86"            "71.86.09",
     nvidia "ia32"           "71.86.11",
