@@ -1,10 +1,8 @@
-module URLs (nvnewsUrls, nvidiaUrls, Link(..)) where
+module URLs (nvnewsUrls, nvidiaUrls) where
 import NVVersionParser
 import Data.Map (Map, fromList, assocs)
 import Data.List
 import Data.Maybe
-
-data Link = Post Int | Thread Int deriving (Show, Ord, Eq)
 
 nvnews ver post =
     (Version ver, "http://www.nvnews.net/vbulletin/showthread.php?p=" ++ show post)
