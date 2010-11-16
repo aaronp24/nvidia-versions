@@ -281,8 +281,8 @@ nvidiaUrls = fromList [
     nvidia "ia32"           "96.43.13",
     nvidia "ia32"           "96.43.14",
     nvidia "ia32"           "96.43.16",
-    dashdv "ia32"           "96.43.18"
-
+    dashdv "ia32"           "96.43.18",
+    dashdv "ia32"           "96.43.19"
  ]
 
 {-
