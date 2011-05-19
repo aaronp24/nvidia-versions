@@ -169,7 +169,9 @@ nvnewsUrls = fromList [
     nvnews "270.29"             2396539,
     nvnews "270.30"             2399427,
     nvnews "270.41.03"          2417099,
-    nvnews "270.41.06"          2421151
+    nvnews "270.41.06"          2421151,
+    nvnews "270.41.19"          2435182,
+    nvnews "275.09"             2435190
  ]
 
 dashdv foo ver =
@@ -284,6 +286,7 @@ nvidiaUrls = fromList [
     dashdv "ia32"           "260.19.44",
     dashdv "ia32"           "270.18",
     dashdv "ia32"           "270.26",
+    dashdv "ia32"           "270.41.06",
     nvidia "x86"            "71.86.04",
     nvidia "x86"            "71.86.09",
     nvidia "ia32"           "71.86.11",
