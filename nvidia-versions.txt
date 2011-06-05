@@ -9,8 +9,7 @@
 #
 # branch maturity version
 current beta 275.09
-current prerelease 270.41.19
-current official 270.41.06
+current official 270.41.19
 173.14 official 173.14.30
 96.43 official 96.43.19
 71.86 official 71.86.14

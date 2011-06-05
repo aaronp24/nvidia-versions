@@ -287,6 +287,7 @@ nvidiaUrls = fromList [
     dashdv "ia32"           "270.18",
     dashdv "ia32"           "270.26",
     dashdv "ia32"           "270.41.06",
+    dashdv "ia32"           "270.41.19",
     nvidia "x86"            "71.86.04",
     nvidia "x86"            "71.86.09",
     nvidia "ia32"           "71.86.11",
