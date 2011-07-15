@@ -9,7 +9,7 @@
 #
 # branch maturity version
 current beta 280.04
-current official 275.09.07
+current official 275.19
 173.14 official 173.14.30
 96.43 official 96.43.19
 71.86 official 71.86.14
