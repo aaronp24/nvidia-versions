@@ -64,6 +64,7 @@ nvnewsUrls = fromList [
     nvnews "71.86.10"           2034415,
     nvnews "71.86.11"           2037367,
     nvnews "71.86.13"           2175898,
+    nvnews "71.86.15"           2459681,
     nvnews "96.43.01"           1391837,
     nvnews "96.43.05"           1537143,
     nvnews "96.43.07"           1714493,
@@ -78,6 +79,7 @@ nvnewsUrls = fromList [
     nvnews "96.43.17"           2236176,
     nvnews "96.43.18"           2288117,
     nvnews "96.43.19"           2341157,
+    nvnews "96.43.20"           2459680,
     nvnews "100.14.03"          1232526,
     nvnews "100.14.06"          1262534,
     nvnews "100.14.06"          1262569,
@@ -104,6 +106,7 @@ nvnewsUrls = fromList [
     nvnews "173.14.27"          2288105,
     nvnews "173.14.28"          2326225,
     nvnews "173.14.30"          2420797,
+    nvnews "173.14.31"          2459679,
     nvnews "177.61.02"          1819302,
     nvnews "177.67"             1749893,
     nvnews "177.68"             1752479,
@@ -174,7 +177,8 @@ nvnewsUrls = fromList [
     nvnews "275.09"             2435190,
     nvnews "275.09.04"          2441669,
     nvnews "275.09.07"          2445094,
-    nvnews "280.04"             2451505
+    nvnews "280.04"             2451505,
+    nvnews "280.11"             2460438
  ]
 
 dashdv foo ver =
