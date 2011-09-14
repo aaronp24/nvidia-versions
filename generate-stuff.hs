@@ -57,6 +57,7 @@ printVerLine verMap name key =
 showBranch verMap heading br = do
     putStrLn $ "[b]" ++ heading ++ "[/b]"
     mapM_ (\(name, mat) -> printVerLine verMap name (br, mat)) [
+        ("Current long-lived branch release", LongLivedBranchRelease),
         ("Current official release", Official),
         ("Current prerelease", Prerelease),
         ("Current beta release", Beta)

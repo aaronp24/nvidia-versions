@@ -11,7 +11,7 @@ data Branch = Unrecognized String | L7160 | L9622 | R173_14 | Current
   deriving (Show, Eq, Ord)
 legacyBranches = [R173_14, L9622, L7160]
 
-data Maturity = Official | Prerelease | Beta
+data Maturity = LongLivedBranchRelease | Official | Prerelease | Beta
   deriving (Show, Eq, Ord)
 newtype Version = Version String
   deriving Eq
@@ -78,6 +78,7 @@ parseBranch = do
         otherwise -> Unrecognized word
 
 parseMaturity =
+    (string "long-lived-branch-release" >> return LongLivedBranchRelease) <|>
     (string "official" >> return Official) <|>
     (string "prerelease" >> return Prerelease) <|>
     (string "beta" >> return Beta)
