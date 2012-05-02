@@ -1,6 +1,6 @@
 module Main where
 import NVVersionParser
-import System
+import System.Exit
 
 main = do
     parseResult <- parseVersionFile
