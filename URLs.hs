@@ -197,8 +197,14 @@ nvnewsUrls = fromList [
     nvnews "295.59"             2563600,
     nvnews "302.07"             2551804,
     nvnews "302.11"             2557224,
-    nvnews "302.17"             2564603
+    nvnews "302.17"             2564603,
+    nvnews "304.22"             2569743
  ]
+
+geforce ver x86 amd64 =
+    (Version ver,
+     ("http://www.geforce.com/drivers/results/" ++ show x86,
+      "http://www.geforce.com/drivers/results/" ++ show amd64))
 
 dashdv foo ver =
     (Version ver,
@@ -329,6 +335,7 @@ nvidiaUrls = fromList [
     dashdv "ia32"           "295.59",
     dashdv "ia32"           "302.07",
     dashdv "ia32"           "302.17",
+    geforce                 "304.22"    46523   46524,
     nvidia "x86"            "71.86.04",
     nvidia "x86"            "71.86.09",
     nvidia "ia32"           "71.86.11",
