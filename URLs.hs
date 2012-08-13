@@ -336,6 +336,8 @@ nvidiaUrls = fromList [
     dashdv "ia32"           "302.07",
     dashdv "ia32"           "302.17",
     geforce                 "304.22"    46523   46524,
+    dashdv "ia32"           "304.32",
+    dashdv "ia32"           "304.37",
     nvidia "x86"            "71.86.04",
     nvidia "x86"            "71.86.09",
     nvidia "ia32"           "71.86.11",
