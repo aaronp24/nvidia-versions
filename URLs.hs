@@ -7,6 +7,10 @@ import Data.Maybe
 nvnews ver post =
     (Version ver, "http://www.nvnews.net/vbulletin/showthread.php?p=" ++ show post)
 
+gplus ver post =
+    (Version ver,
+    "https://plus.google.com/u/0/118125769023950376556/posts/" ++ post)
+
 nvnewsUrls = fromList [
     nvnews "1.0-4349"             95425,
     nvnews "1.0-4363"            108997,
@@ -80,6 +84,7 @@ nvnewsUrls = fromList [
     nvnews "96.43.18"           2288117,
     nvnews "96.43.19"           2341157,
     nvnews "96.43.20"           2459680,
+    gplus  "95.43.23"           "RfCBEGaPHnX",
     nvnews "100.14.03"          1232526,
     nvnews "100.14.06"          1262534,
     nvnews "100.14.06"          1262569,
@@ -109,6 +114,7 @@ nvnewsUrls = fromList [
     nvnews "173.14.31"          2459679,
     nvnews "173.14.34"          2557225,
     nvnews "173.14.35"          2561548,
+    gplus  "173.14.36"          "ZcHd6YiHBAJ",
     nvnews "177.61.02"          1819302,
     nvnews "177.67"             1749893,
     nvnews "177.68"             1752479,
@@ -198,7 +204,12 @@ nvnewsUrls = fromList [
     nvnews "302.07"             2551804,
     nvnews "302.11"             2557224,
     nvnews "302.17"             2564603,
-    nvnews "304.22"             2569743
+    nvnews "304.22"             2569743,
+    gplus  "304.30"             "CH8AW2xxr9y",
+    gplus  "304.32"             "WyUqVNffP8G",
+    gplus  "304.37"             "NaUpmMPpMn8",
+    gplus  "304.43"             "3XjWXeLTmeC",
+    gplus  "304.48"             "bHW91CsG4bP"
  ]
 
 geforce ver x86 amd64 =
