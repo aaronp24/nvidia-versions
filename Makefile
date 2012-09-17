@@ -8,7 +8,7 @@ clean::
 
 .PHONY: validate stuff upload clean
 
-upload_files := nvidia-versions.txt
+upload_files := nvidia-versions.txt .htaccess
 
 .upload-stamp: .validate-stamp $(upload_files)
 	scp $(upload_files) people.freedesktop.org:public_html/
@@ -23,3 +23,9 @@ validate-versions: NVVersionParser.hs validate-versions.hs
 
 generate-stuff: NVVersionParser.hs generate-stuff.hs URLs.hs
 	ghc --make $@
+
+generate-htaccess: NVVersionParser.hs generate-htaccess.hs
+	ghc --make $@
+
+.htaccess: generate-htaccess
+	./generate-htaccess > $@

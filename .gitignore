@@ -1,7 +1,9 @@
+.htaccess
 .upload-stamp
 .validate-stamp
-validate-versions
+generate-htaccess
 generate-stuff
+validate-versions
 *.swp
 *.o
 *.hi
