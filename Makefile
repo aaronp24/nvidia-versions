@@ -27,5 +27,5 @@ generate-stuff: NVVersionParser.hs generate-stuff.hs URLs.hs
 generate-htaccess: NVVersionParser.hs generate-htaccess.hs
 	ghc --make $@
 
-.htaccess: generate-htaccess
+.htaccess: generate-htaccess nvidia-versions.txt
 	./generate-htaccess > $@

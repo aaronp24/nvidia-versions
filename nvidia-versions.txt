@@ -8,8 +8,7 @@
 # Plattner do not guarantee the accuracy of its contents.
 #
 # branch maturity version
-current prerelease 304.48
-current official 304.43
+current official 304.51
 current long-lived-branch-release 304.43
 opengl4.3 beta 304.15.00.02
 173.14 prerelease 173.14.36
