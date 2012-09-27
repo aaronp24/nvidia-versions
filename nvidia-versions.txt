@@ -10,7 +10,7 @@
 # branch maturity version
 current official 304.51
 current long-lived-branch-release 304.43
-opengl4.3 beta 304.15.00.02
+opengl4.3 beta 304.15.00.03
 173.14 prerelease 173.14.36
 173.14 official 173.14.35
 96.43 official 96.43.23
