@@ -7,9 +7,13 @@ import Data.Maybe
 nvnews ver post =
     (Version ver, "http://www.nvnews.net/vbulletin/showthread.php?p=" ++ show post)
 
+gplusAP ver post =
+    (Version ver,
+     "https://plus.google.com/u/0/118125769023950376556/posts/" ++ post)
+
 gplus ver post =
     (Version ver,
-    "https://plus.google.com/u/0/118125769023950376556/posts/" ++ post)
+     "https://plus.google.com/b/111507336169069468438/111507336169069468438/posts/" ++ post)
 
 nvnewsUrls = fromList [
     nvnews "1.0-4349"             95425,
@@ -84,7 +88,7 @@ nvnewsUrls = fromList [
     nvnews "96.43.18"           2288117,
     nvnews "96.43.19"           2341157,
     nvnews "96.43.20"           2459680,
-    gplus  "95.43.23"           "RfCBEGaPHnX",
+    gplusAP"95.43.23"           "RfCBEGaPHnX",
     nvnews "100.14.03"          1232526,
     nvnews "100.14.06"          1262534,
     nvnews "100.14.06"          1262569,
@@ -114,7 +118,7 @@ nvnewsUrls = fromList [
     nvnews "173.14.31"          2459679,
     nvnews "173.14.34"          2557225,
     nvnews "173.14.35"          2561548,
-    gplus  "173.14.36"          "ZcHd6YiHBAJ",
+    gplusAP"173.14.36"          "ZcHd6YiHBAJ",
     nvnews "177.61.02"          1819302,
     nvnews "177.67"             1749893,
     nvnews "177.68"             1752479,
@@ -205,12 +209,13 @@ nvnewsUrls = fromList [
     nvnews "302.11"             2557224,
     nvnews "302.17"             2564603,
     nvnews "304.22"             2569743,
-    gplus  "304.30"             "CH8AW2xxr9y",
-    gplus  "304.32"             "WyUqVNffP8G",
-    gplus  "304.37"             "NaUpmMPpMn8",
-    gplus  "304.43"             "3XjWXeLTmeC",
-    gplus  "304.48"             "bHW91CsG4bP",
-    gplus  "304.51"             "JbkK5Qj336F"
+    gplusAP"304.30"             "CH8AW2xxr9y",
+    gplusAP"304.32"             "WyUqVNffP8G",
+    gplusAP"304.37"             "NaUpmMPpMn8",
+    gplusAP"304.43"             "3XjWXeLTmeC",
+    gplusAP"304.48"             "bHW91CsG4bP",
+    gplus  "304.51"             "1pYMy7pvNyG",
+    gplus  "310.14"             "A7tRXyzXDaK"
  ]
 
 geforce ver x86 amd64 =
@@ -351,6 +356,7 @@ nvidiaUrls = fromList [
     dashdv "ia32"           "304.32",
     dashdv "ia32"           "304.37",
     dashdv "ia32"           "304.43",
+    dashdv "ia32"           "310.14",
     nvidia "x86"            "71.86.04",
     nvidia "x86"            "71.86.09",
     nvidia "ia32"           "71.86.11",
