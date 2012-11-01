@@ -15,6 +15,9 @@ gplus ver post =
     (Version ver,
      "https://plus.google.com/b/111507336169069468438/111507336169069468438/posts/" ++ post)
 
+devtalk ver post =
+    (Version ver, "https://devtalk.nvidia.com/default/topic/" ++ show post)
+
 nvnewsUrls = fromList [
     nvnews "1.0-4349"             95425,
     nvnews "1.0-4363"            108997,
@@ -216,7 +219,8 @@ nvnewsUrls = fromList [
     gplusAP"304.48"             "bHW91CsG4bP",
     gplus  "304.51"             "1pYMy7pvNyG",
     gplus  "304.60"             "jZsS2w59sEi",
-    gplus  "310.14"             "A7tRXyzXDaK"
+ -- gplus  "310.14"             "A7tRXyzXDaK"
+    devtalk"310.14"              522735
  ]
 
 geforce ver x86 amd64 =
