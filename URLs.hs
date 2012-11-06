@@ -219,6 +219,8 @@ nvnewsUrls = fromList [
     gplusAP"304.48"             "bHW91CsG4bP",
     gplus  "304.51"             "1pYMy7pvNyG",
     gplus  "304.60"             "jZsS2w59sEi",
+ -- gplus  "304.64"             "35P6s5CUqz3",
+    devtalk"304.64"              523277,
  -- gplus  "310.14"             "A7tRXyzXDaK"
     devtalk"310.14"              522735
  ]
