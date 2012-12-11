@@ -222,7 +222,9 @@ nvnewsUrls = fromList [
  -- gplus  "304.64"             "35P6s5CUqz3",
     devtalk"304.64"              523277,
  -- gplus  "310.14"             "A7tRXyzXDaK"
-    devtalk"310.14"              522735
+    devtalk"310.14"              522735,
+ -- gplus  "313.09"             "HkXtswZF2yR",
+    devtalk"313.09"              525473
  ]
 
 geforce ver x86 amd64 =
