@@ -75,7 +75,7 @@ nvnewsUrls = fromList [
     nvnews "71.86.10"           2034415,
     nvnews "71.86.11"           2037367,
     nvnews "71.86.13"           2175898,
-    nvnews "71.86.15"           2459681,
+    --nvnews "71.86.15"           2459681,
     nvnews "96.43.01"           1391837,
     nvnews "96.43.05"           1537143,
     nvnews "96.43.07"           1714493,
@@ -121,7 +121,7 @@ nvnewsUrls = fromList [
     nvnews "173.14.31"          2459679,
     nvnews "173.14.34"          2557225,
     nvnews "173.14.35"          2561548,
-    gplusAP"173.14.36"          "ZcHd6YiHBAJ",
+    --gplusAP"173.14.36"          "ZcHd6YiHBAJ",
     nvnews "177.61.02"          1819302,
     nvnews "177.67"             1749893,
     nvnews "177.68"             1752479,
@@ -319,6 +319,7 @@ nvidiaUrls = fromList [
     dashdv "ia32"           "173.14.28",
     dashdv "ia32"           "173.14.30",
     dashdv "ia32"           "173.14.31",
+    dashdv "ia32"           "173.14.36",
     nvidia "ia32"           "177.70.33",
     nvidia "ia32"           "180.29",
     nvidia "ia32"           "180.44",
@@ -375,6 +376,7 @@ nvidiaUrls = fromList [
     dashdv "ia32"           "304.51",
     dashdv "ia32"           "304.60",
     dashdv "ia32"           "304.64",
+    dashdv "ia32"           "304.84",
     dashdv "ia32"           "310.14",
     dashdv "ia32"           "310.19",
     dashdv "ia32"           "310.32",
@@ -392,7 +394,8 @@ nvidiaUrls = fromList [
     nvidia "ia32"           "96.43.16",
     dashdv "ia32"           "96.43.18",
     dashdv "ia32"           "96.43.19",
-    dashdv "ia32"           "96.43.20"
+    dashdv "ia32"           "96.43.20",
+    dashdv "ia32"           "96.43.23"
  ]
 
 {-

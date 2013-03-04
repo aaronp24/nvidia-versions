@@ -103,7 +103,7 @@ main = do
     let verMap = toMap versions
     let showVer = printVerLine verMap
 
-    putStrLn "============= nvnews.net current releases =============="
+    putStrLn "============= devtalk.nvidia.com current releases =============="
     showBranch verMap "Current releases" Current
     showBranch verMap "Legacy releases for GeForce 6 and 7 series GPUs" R304_00
     showBranch verMap "Legacy releases for GeForce 5 series GPUs" R173_14
