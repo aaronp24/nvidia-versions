@@ -225,6 +225,7 @@ nvnewsUrls = fromList [
     devtalk"304.64"              523277,
  -- gplus  "304.84"             "6X2C91JPv5d",
     devtalk"304.84"              533430,
+    devtalk"304.88"              538339,
  -- gplus  "310.14"             "A7tRXyzXDaK"
     devtalk"310.14"              522735,
     devtalk"310.19"              523709,
@@ -232,12 +233,14 @@ nvnewsUrls = fromList [
     devtalk"310.32"              528020,
  -- gplus  "310.40"             "JrPxBUXY2h2",
     devtalk"310.40"              534072,
+    devtalk"310.44"              538337,
  -- gplus  "313.09"             "HkXtswZF2yR",
     devtalk"313.09"              525473,
  -- gplus  "313.18"             "gCCrC4iAgAR",
     devtalk"313.18"              527649,
  -- gplus  "313.26"             "W2hEBtS9GLk",
-    devtalk"313.26"              533558
+    devtalk"313.26"              533558,
+    devtalk"313.30"              538338
  ]
 
 geforce ver x86 amd64 =
@@ -383,13 +386,16 @@ nvidiaUrls = fromList [
     dashdv "ia32"           "304.60",
     dashdv "ia32"           "304.64",
     dashdv "ia32"           "304.84",
+    dashdv "ia32"           "304.88",
     dashdv "ia32"           "310.14",
     dashdv "ia32"           "310.19",
     dashdv "ia32"           "310.32",
     dashdv "ia32"           "310.40",
+    dashdv "ia32"           "310.44",
     dashdv "ia32"           "313.09",
     dashdv "ia32"           "313.18",
     dashdv "ia32"           "313.26",
+    dashdv "ia32"           "313.30",
     nvidia "x86"            "71.86.04",
     nvidia "x86"            "71.86.09",
     nvidia "ia32"           "71.86.11",
