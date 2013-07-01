@@ -247,36 +247,51 @@ nvnewsUrls = fromList [
  -- gplus  "319.17"             "ZrufaebDjWe",
     devtalk"319.17"              542748,
  -- gplus  "319.23"             "hyUCyZRhent",
-    devtalk"319.23"              544916
+    devtalk"319.23"              544916,
+ -- gplus  "319.32"             "95vourtpbVu",
+    devtalk"319.32"              548414,
+ -- gplus  "325.08"             "TEiPZSrw28V",
+    devtalk"325.08"              549155
  ]
 
 geforce ver x86 amd64 =
     (Version ver,
      ("http://www.geforce.com/drivers/results/" ++ show x86,
-      "http://www.geforce.com/drivers/results/" ++ show amd64))
+      "http://www.geforce.com/drivers/results/" ++ show amd64,
+      Nothing))
+
+withArm ver =
+    (Version ver,
+     ("http://www.nvidia.com/object/linux-display-ia32-" ++ ver ++ "-driver.html",
+      "http://www.nvidia.com/object/linux-display-amd64-" ++ ver ++ "-driver.html",
+      Just ("http://www.nvidia.com/object/linux-display-32bit-arm-" ++ ver ++ "-driver.html")))
 
 dashdv foo ver =
     (Version ver,
      ("http://www.nvidia.com/object/linux-display-" ++ foo ++ "-" ++ ver ++ "-driver.html",
-      "http://www.nvidia.com/object/linux-display-amd64-" ++ ver ++ "-driver.html"))
+      "http://www.nvidia.com/object/linux-display-amd64-" ++ ver ++ "-driver.html",
+      Nothing))
 
 dashes foo ver =
     (Version ver,
      ("http://www.nvidia.com/object/linux-display-" ++ foo ++ "-" ++ ver ++ ".html",
-      "http://www.nvidia.com/object/linux-display-amd64-" ++ ver ++ ".html"))
+      "http://www.nvidia.com/object/linux-display-amd64-" ++ ver ++ ".html",
+      Nothing))
 
 nvidia foo ver =
     (Version ver,
      ("http://www.nvidia.com/object/linux_display_" ++ foo ++ "_" ++ ver ++ ".html",
-      "http://www.nvidia.com/object/linux_display_amd64_" ++ ver ++ ".html"))
+      "http://www.nvidia.com/object/linux_display_amd64_" ++ ver ++ ".html",
+      Nothing))
 
 ancient ver =
     (Version ver,
-     ("http://www.nvidia.com/object/linux_display_" ++ ver ++ ".html", "n/a"))
+     ("http://www.nvidia.com/object/linux_display_" ++ ver ++ ".html", "n/a",
+     Nothing))
 
 reallyAncient ver =
     (Version ver,
-     ("http://www.nvidia.com/object/linux_v" ++ ver ++ ".html", "n/a"))
+     ("http://www.nvidia.com/object/linux_v" ++ ver ++ ".html", "n/a", Nothing))
 
 nvidiaUrls = fromList [
     nvidia "ia32"           "100.14.03",
@@ -358,8 +373,8 @@ nvidiaUrls = fromList [
     dashdv "ia32"           "195.36.31",
     dashes "ia32"           "256.25",
     dashdv "ia32"           "256.35",
-    (Version                "256.38.02", ("http://developer.download.nvidia.com/opengl/4.1/linux/NVIDIA-Linux-x86-256.38.02.run", "http://developer.download.nvidia.com/opengl/4.1/linux/NVIDIA-Linux-x86_64-256.38.02.run")),
-    (Version                "256.38.03", ("http://developer.download.nvidia.com/opengl/4.1/linux/NVIDIA-Linux-x86-256.38.03.run", "http://developer.download.nvidia.com/opengl/4.1/linux/NVIDIA-Linux-x86_64-256.38.03.run")),
+    (Version                "256.38.02", ("http://developer.download.nvidia.com/opengl/4.1/linux/NVIDIA-Linux-x86-256.38.02.run", "http://developer.download.nvidia.com/opengl/4.1/linux/NVIDIA-Linux-x86_64-256.38.02.run", Nothing)),
+    (Version                "256.38.03", ("http://developer.download.nvidia.com/opengl/4.1/linux/NVIDIA-Linux-x86-256.38.03.run", "http://developer.download.nvidia.com/opengl/4.1/linux/NVIDIA-Linux-x86_64-256.38.03.run", Nothing)),
     dashdv "ia32"           "256.44",
     dashdv "ia32"           "256.53",
     dashdv "ia32"           "260.19.12",
@@ -407,6 +422,8 @@ nvidiaUrls = fromList [
     dashdv "ia32"           "319.12",
     dashdv "ia32"           "319.17",
     dashdv "ia32"           "319.23",
+    withArm                 "319.32",
+    withArm                 "325.08",
     nvidia "x86"            "71.86.04",
     nvidia "x86"            "71.86.09",
     nvidia "ia32"           "71.86.11",

@@ -45,9 +45,13 @@ printVerLine verMap name key =
         putStr name
         putStr ": "
         doWithUrl ver nvnewsUrls (putStr (show ver))
-        doLookup ver nvidiaUrls (\(x86, x86_64) -> do
+        doLookup ver nvidiaUrls (\(x86, x86_64, arm) -> do
             putStr $ " (" ++ (linkTo x86 "x86") ++ " / " ++
-                             (linkTo x86_64 "x86_64") ++ ")"
+                             (linkTo x86_64 "x86_64")
+            whenM arm (\armVer -> do
+                putStr $ " / " ++ (linkTo armVer "ARM")
+             )
+            putStr ")"
          )
         putStrLn ""
      )
