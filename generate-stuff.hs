@@ -126,5 +126,5 @@ main = do
     putStr "UNOFFICIAL NVIDIA Linux/FreeBSD/Solaris Graphics Driver Support | Releases: "
     printIRCTopic verMap
     putStr " | ftp://download.nvidia.com | DO NOT FLOOD! (use "
-    putStr "http://pastebin.com) | try to use your distribution's driver "
+    putStr "https://gist.github.com) | try to use your distribution's driver "
     putStrLn "packages | Have you tried nvidia-settings?"
