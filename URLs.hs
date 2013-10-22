@@ -262,7 +262,9 @@ nvnewsUrls = fromList [
  -- gplus  "325.15"             "ZMeyXz7iUjv",
     devtalk"325.15"              571558,
  -- gplus  "331.13"             "V1ZrUfdoPNn",
-    devtalk"331.13"              616907
+    devtalk"331.13"              616907,
+ -- gplus  "331.17"             "9z6GiWFkH5T",
+    devtalk"331.17"              625178
  ]
 
 geforce ver x86 amd64 =
@@ -303,6 +305,12 @@ ancient ver =
 reallyAncient ver =
     (Version ver,
      ("http://www.nvidia.com/object/linux_v" ++ ver ++ ".html", "n/a", Nothing))
+
+dr ver x86 amd64 arm =
+    (Version ver,
+     ("http://www.nvidia.com/Download/driverResults.aspx/" ++ show x86 ++ "/en-us",
+      "http://www.nvidia.com/Download/driverResults.aspx/" ++ show amd64 ++ "/en-us",
+      Just ("http://www.nvidia.com/Download/driverResults.aspx/" ++ show arm ++ "/en-us")))
 
 nvidiaUrls = fromList [
     nvidia "ia32"           "100.14.03",
@@ -442,6 +450,7 @@ nvidiaUrls = fromList [
     withArm                 "325.08",
     withArm                 "325.15",
     withArm                 "331.13",
+    dr                      "331.17" 68685 68688 68684,
     nvidia "x86"            "71.86.04",
     nvidia "x86"            "71.86.09",
     nvidia "ia32"           "71.86.11",
