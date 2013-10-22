@@ -9,11 +9,11 @@ nvnews ver post =
 
 gplusAP ver post =
     (Version ver,
-     "https://plus.google.com/u/0/118125769023950376556/posts/" ++ post)
+     "https://plus.google.com/118125769023950376556/posts/" ++ post)
 
 gplus ver post =
     (Version ver,
-     "https://plus.google.com/b/111507336169069468438/111507336169069468438/posts/" ++ post)
+     "https://plus.google.com/111507336169069468438/posts/" ++ post)
 
 devtalk ver post =
     (Version ver, "https://devtalk.nvidia.com/default/topic/" ++ show post)
