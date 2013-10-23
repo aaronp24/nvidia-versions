@@ -1,6 +1,6 @@
-validate: .validate-stamp
 stuff: .validate-stamp generate-stuff
 	@./generate-stuff
+validate: .validate-stamp
 upload: .upload-stamp
 
 clean::
