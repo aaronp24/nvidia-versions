@@ -69,3 +69,5 @@ A typical driver release consists of the following steps:
         git commit -m <version>
         git tag <version>
         git push github master <version>
+
+11. Update the changelog to add a release date line for this release.
