@@ -9,7 +9,7 @@ nvnews ver post =
 
 gplusAP ver post =
     (Version ver,
-     "https://plus.google.com/118125769023950376556/posts/" ++ post)
+     "https://plus.google.com/+AaronPlattner/posts/" ++ post)
 
 gplus ver post =
     (Version ver,
