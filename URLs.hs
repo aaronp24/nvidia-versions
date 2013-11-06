@@ -229,6 +229,8 @@ nvnewsUrls = fromList [
     devtalk"304.84"              533430,
     devtalk"304.88"              538339,
     devtalk"304.108"             572368,
+ -- gplus  "304.116"            "SUzBnKM86AS",
+    devtalk"304.116"             632711,
  -- gplus  "310.14"             "A7tRXyzXDaK"
     devtalk"310.14"              522735,
     devtalk"310.19"              523709,
@@ -257,6 +259,8 @@ nvnewsUrls = fromList [
     devtalk"319.49"              573509,
  -- gplus  "319.60"             "LXqRjvigf7x",
     devtalk"319.60"              615981,
+ -- gplus  "319.72"             "SUzBnKM86AS",
+    devtalk"319.72"              632710,
  -- gplus  "325.08"             "TEiPZSrw28V",
     devtalk"325.08"              549155,
  -- gplus  "325.15"             "ZMeyXz7iUjv",
@@ -313,6 +317,12 @@ dr ver x86 amd64 arm =
      ("http://www.nvidia.com/Download/driverResults.aspx/" ++ show x86 ++ "/en-us",
       "http://www.nvidia.com/Download/driverResults.aspx/" ++ show amd64 ++ "/en-us",
       Just ("http://www.nvidia.com/Download/driverResults.aspx/" ++ show arm ++ "/en-us")))
+
+drNoArm ver x86 amd64 =
+    (Version ver,
+     ("http://www.nvidia.com/Download/driverResults.aspx/" ++ show x86 ++ "/en-us",
+      "http://www.nvidia.com/Download/driverResults.aspx/" ++ show amd64 ++ "/en-us",
+      Nothing))
 
 nvidiaUrls = fromList [
     nvidia "ia32"           "100.14.03",
@@ -433,6 +443,7 @@ nvidiaUrls = fromList [
     dashdv                  "304.84",
     dashdv                  "304.88",
     dashdv                  "304.108",
+    drNoArm                 "304.116" 69365 69366,
     dashdv                  "310.14",
     dashdv                  "310.19",
     dashdv                  "310.32",
@@ -449,6 +460,7 @@ nvidiaUrls = fromList [
     withArm                 "319.32",
     withArm                 "319.49",
     withArm                 "319.60",
+    dr                      "319.72" 69377 69378 69376,
     withArm                 "325.08",
     withArm                 "325.15",
     withArm                 "331.13",
