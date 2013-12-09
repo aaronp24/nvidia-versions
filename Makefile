@@ -8,7 +8,7 @@ clean::
 
 .PHONY: validate stuff upload clean
 
-upload_files := nvidia-versions.txt .htaccess
+upload_files := .htaccess
 
 .upload-stamp: .validate-stamp $(upload_files)
 	scp $(upload_files) people.freedesktop.org:public_html/
