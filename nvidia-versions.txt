@@ -11,6 +11,6 @@
 current official 331.20
 current long-lived-branch-release 331.20
 304 official 304.116
-173.14 official 173.14.38
+173.14 official 173.14.39
 96.43 official 96.43.23
 71.86 official 71.86.15
