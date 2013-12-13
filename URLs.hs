@@ -233,6 +233,8 @@ nvnewsUrls = fromList [
     devtalk"304.108"             572368,
  -- gplus  "304.116"            "SUzBnKM86AS",
     devtalk"304.116"             632711,
+ -- gplus  "304.117"            "3CwSNtoWR2Z",
+    devtalk"304.117"             658657,
  -- gplus  "310.14"             "A7tRXyzXDaK"
     devtalk"310.14"              522735,
     devtalk"310.19"              523709,
@@ -447,6 +449,7 @@ nvidiaUrls = fromList [
     dashdv                  "304.88",
     dashdv                  "304.108",
     drNoArm                 "304.116" 69365 69366,
+    drNoArm                 "304.117" 71378 71379,
     dashdv                  "310.14",
     dashdv                  "310.19",
     dashdv                  "310.32",
