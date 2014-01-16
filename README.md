@@ -66,7 +66,7 @@ A typical driver release consists of the following steps:
         git add -A
         git status
         git diff --cached
-        git commit -m <version>
+        git commit -S -m <version>
         git tag <version>
         git push github master <version>
 
