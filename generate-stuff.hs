@@ -1,10 +1,11 @@
 module Main where
 import NVVersionParser
 import URLs
+import Data.Foldable(forM_)
 import Data.Map(Map)
 import qualified Data.Map as Map
 import Data.List
-import Control.Monad
+import Control.Monad(when)
 
 type Key = (Branch, Maturity)
 
@@ -15,21 +16,18 @@ toMap versions =
  where
     split (Driver br mat ver) = ((br, mat), ver)
 
-whenM (Just v) f = f v
-whenM Nothing _ = return ()
-
 -- If key is a member of the given map, look it up and pass the result
 -- to a function that returns an IO action.  Otherwise, do nothing.
-doLookup key = whenM . (Map.lookup key)
+doLookup key = forM_ . (Map.lookup key)
 
 -- Execute an IO action wrapped in [url="foo"]...[/url]
 -- if the given key exists in the specified map.  Just execute the
 -- action otherwise.
 doWithUrl key m action = do
     let result = Map.lookup key m
-    whenM result (\url -> putStr (linkTag url))
+    forM_ result (\url -> putStr (linkTag url))
     action
-    whenM result (\_ -> putStr "[/url]")
+    forM_ result (\_ -> putStr "[/url]")
 
 linkTag url = "[url=\"" ++ url ++ "\"]"
 linkTo url str = linkTag url ++ str ++ "[/url]"
@@ -48,7 +46,7 @@ printVerLine verMap name key =
         doLookup ver nvidiaUrls (\(x86, x86_64, arm) -> do
             putStr $ " (" ++ (linkTo x86 "x86") ++ " / " ++
                              (linkTo x86_64 "x86_64")
-            whenM arm (\armVer -> do
+            forM_ arm (\armVer -> do
                 putStr $ " / " ++ (linkTo armVer "ARM")
              )
             putStr ")"
@@ -74,7 +72,7 @@ showBranch verMap heading br = do
 -- prerelease exists, use the latest official version.  For the legacy drivers,
 -- just list the latest of each.
 printIRCTopic verMap = do
-    whenM (Map.lookup (Current, Beta) verMap) (\ver -> do
+    forM_ (Map.lookup (Current, Beta) verMap) (\ver -> do
         putStr "beta: "
         putStr (show ver)
         putStr ", "
