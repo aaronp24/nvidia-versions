@@ -88,7 +88,7 @@ printIRCTopic verMap = do
                 putStr (show ver)
                 putStr ", "
             Nothing -> return ()
-    let legacyVers = map (findNewestInBranch verMap) legacyBranches
+    let legacyVers = map (findNewestInBranch verMap) supportedLegacyBranches
     when (not (null legacyVers)) $ do
         putStr "legacy: "
         putStr (concat (intersperse ", " (map show legacyVers)))

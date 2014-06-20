@@ -1,6 +1,6 @@
 module NVVersionParser (
     Driver(..), Branch(..), Maturity(..), Version(..),
-    parseVersionFile, legacyBranches
+    parseVersionFile, supportedLegacyBranches
 ) where
 import Text.ParserCombinators.Parsec
 import Data.List
@@ -9,7 +9,7 @@ import Data.List
 
 data Branch = Unrecognized String | L7160 | L9622 | R173_14 | R304_00 | Current
   deriving (Show, Eq, Ord)
-legacyBranches = [R304_00, R173_14, L9622, L7160]
+supportedLegacyBranches = [R304_00]
 
 data Maturity = LongLivedBranchRelease | Official | Prerelease | Beta
   deriving (Show, Eq, Ord)
