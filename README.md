@@ -17,9 +17,7 @@ A typical driver release consists of the following steps:
     `nvnewsUrls` map.  Try to keep this list roughly sorted, just for
     aesthetics.
 
-3.  Link to the forum post from Google+.  Record the post ID from that in
-    URLs.hs on a comment line; these are just saved for posterity and aren't
-    actually used.
+3.  Link to the forum post from Google+.
 
 4.  Add a line for the new driver to the `nvidiaUrls` map in URLs.hs.  Use the
     appropriate helper function for the URL scheme used by this release, or add
