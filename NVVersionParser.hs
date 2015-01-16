@@ -7,9 +7,10 @@ import Data.List
 
 -- Data type
 
-data Branch = Unrecognized String | L7160 | L9622 | R173_14 | R304_00 | Current
+data Branch = Unrecognized String | L7160 | L9622 | R173_14 | R304_00 | R340_00
+            | Current
   deriving (Show, Eq, Ord)
-supportedLegacyBranches = [R304_00]
+supportedLegacyBranches = [R304_00, R340_00]
 
 data Maturity = LongLivedBranchRelease | Official | Prerelease | Beta
   deriving (Show, Eq, Ord)
@@ -72,6 +73,7 @@ parseBranch = do
     word <- parseWord
     return $ case word of
         "current" -> Current
+        "340"     -> R340_00
         "304"     -> R304_00
         "173.14"  -> R173_14
         "96.43"   -> L9622
