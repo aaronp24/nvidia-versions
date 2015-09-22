@@ -19,5 +19,3 @@ main = do
 
     putStrLn "Redirect 302 /~aplattner/nv http://xorg.freedesktop.org/releases/individual/driver/xf86-video-nv-2.1.20.tar.bz2"
     putStrLn ("Redirect 302 /~aplattner/nvidia-readme http://us.download.nvidia.com/XFree86/Linux-x86/" ++ show newest ++ "/README/")
-    putStrLn "Redirect 302 /~aplattner/nvidia-versions https://raw.github.com/aaronp24/nvidia-versions/master/nvidia-versions.txt"
-    putStrLn "Redirect 302 /~aplattner/nvidia-versions.txt https://raw.github.com/aaronp24/nvidia-versions/master/nvidia-versions.txt"
