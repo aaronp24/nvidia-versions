@@ -121,7 +121,7 @@ main = do
     -- showBranch verMap "OpenGL 4.1" (Unrecognized "opengl4.1")
 
     let (_, newest) = Map.findMax verMap
-    putStr "Please see [URL=\"ftp://download.nvidia.com/XFree86/Linux-x86/"
+    putStr "Please see [URL=\"http://us.download.nvidia.com/XFree86/Linux-x86/"
     putStr (show newest)
     putStrLn "/README/supportedchips.html\"]Appendix A[/URL] of the README to determine which driver you need for your GPU."
 
