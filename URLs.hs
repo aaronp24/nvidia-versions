@@ -233,6 +233,7 @@ nvnewsUrls = fromList [
     devtalk"304.123"             760649,
     devtalk"304.125"             794017,
     devtalk"304.128"             873016,
+    devtalk"304.131"             898110,
     devtalk"310.14"              522735,
     devtalk"310.19"              523709,
     devtalk"310.32"              528020,
@@ -273,6 +274,7 @@ nvnewsUrls = fromList [
     devtalk"340.65"              794751,
     devtalk"340.76"              806898,
     devtalk"340.93"              873693,
+    devtalk"340.96"              898111,
     devtalk"343.13"              766018,
     devtalk"343.22"              776025,
     devtalk"343.36"              794014,
@@ -291,10 +293,13 @@ nvnewsUrls = fromList [
     devtalk"352.21"              844925,
     devtalk"352.30"              860119,
     devtalk"352.41"              872100,
+    devtalk"352.63"              898758,
     devtalk"352.55"              885238,
     devtalk"355.06"              862392,
     devtalk"355.11"              873015,
-    devtalk"358.09"              884727
+    devtalk"358.09"              884727,
+    devtalk"358.16"              898762,
+    devtalk"361.16"              908423
  ]
 
 geforce ver x86 amd64 =
@@ -543,6 +548,7 @@ nvidiaUrls = fromList [
     dr                      "355.11" 90392 90393 90394,
     dr                      "358.09" 92711 92712 92713,
     dr                      "358.16" 95920 95921 95922,
+    dr                      "361.16" 97302 97303 97304,
     nvidia "x86"            "71.86.04",
     nvidia "x86"            "71.86.09",
     nvidia "ia32"           "71.86.11",
