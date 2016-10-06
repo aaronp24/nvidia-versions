@@ -118,8 +118,6 @@ main = do
                " for more details.[/i]"
     putStrLn ""
 
-    -- showBranch verMap "OpenGL 4.1" (Unrecognized "opengl4.1")
-
     let (_, newest) = Map.findMax verMap
     putStr "Please see [URL=\"http://us.download.nvidia.com/XFree86/Linux-x86/"
     putStr (show newest)

@@ -7,8 +7,7 @@ import Data.List
 
 -- Data type
 
-data Branch = Unrecognized String | L7160 | L9622 | R173_14 | R304_00 | R340_00
-            | Current
+data Branch = L7160 | L9622 | R173_14 | R304_00 | R340_00 | Current
   deriving (Show, Eq, Ord)
 supportedLegacyBranches = [R304_00, R340_00]
 
@@ -71,14 +70,14 @@ parseWord = many1 (alphaNum <|> oneOf "._")
 
 parseBranch = do
     word <- parseWord
-    return $ case word of
-        "current" -> Current
-        "340"     -> R340_00
-        "304"     -> R304_00
-        "173.14"  -> R173_14
-        "96.43"   -> L9622
-        "71.86"   -> L7160
-        otherwise -> Unrecognized word
+    case word of
+        "current" -> return Current
+        "340"     -> return R340_00
+        "304"     -> return R304_00
+        "173.14"  -> return R173_14
+        "96.43"   -> return L9622
+        "71.86"   -> return L7160
+        otherwise -> fail ("Unrecognized branch name " ++ word)
 
 parseMaturity =
     (string "long-lived-branch-release" >> return LongLivedBranchRelease) <|>
