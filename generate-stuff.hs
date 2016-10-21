@@ -100,6 +100,35 @@ printIRCTopic verMap = do
          in
             ver
 
+generateForumPostTemplate ver = do
+    putStrLn "============================= Forum post template =============================="
+
+    putStrLn "Release highlights since <VERSION>:"
+    putStrLn "[list]"
+    putStrLn "[/.][/list]"
+    let server = "http://us.download.nvidia.com/"
+    let platforms =
+          [
+            ("XFree86/Linux-x86",      "Linux-x86",              ".run",    "Linux x86"),
+            ("XFree86/Linux-x86_64",   "Linux-x86_64",           ".run",    "Linux x86_64"),
+            ("XFree86/Linux-x86-ARM",  "Linux-armv7l-gnueabihf", ".run",    "Linux ARM"),
+            ("solaris",                "Solaris-x86",            ".run",    "Solaris"),
+            ("XFree86/FreeBSD-x86",    "FreeBSD-x86",            ".tar.gz", "FreeBSD x86"),
+            ("XFree86/FreeBSD-x86_64", "FreeBSD-x86_64",         ".tar.gz", "FreeBSD x86_64")
+          ]
+    let platformToStringPair (dirName, platName, suffix, userString) =
+          (server ++ dirName ++ "/" ++ ver ++ "/NVIDIA-" ++ platName ++ "-" ++
+           ver ++ suffix,
+           userString)
+    let stringPairs =
+          (server ++ "XFree86/Linux-x86/" ++ ver ++ "/README/index.html", "README") :
+          (map platformToStringPair platforms)
+    let urlStrings = map (uncurry linkTo) stringPairs
+
+    putStr "["
+    putStr (concat (intersperse " | " urlStrings))
+    putStrLn "]"
+
 main = do
     Right versions <- parseVersionFile
     let verMap = toMap versions
@@ -122,6 +151,8 @@ main = do
     putStr "Please see [URL=\"http://us.download.nvidia.com/XFree86/Linux-x86/"
     putStr (show newest)
     putStrLn "/README/supportedchips.html\"]Appendix A[/URL] of the README to determine which driver you need for your GPU."
+
+    generateForumPostTemplate (show newest)
 
     putStrLn "====================== IRC topic ======================="
     putStr "/topic "
