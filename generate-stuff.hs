@@ -133,8 +133,13 @@ main = do
     Right versions <- parseVersionFile
     let verMap = toMap versions
     let showVer = printVerLine verMap
+    let (_, newest) = Map.findMax verMap
 
-    putStrLn "============= devtalk.nvidia.com current releases =============="
+    generateForumPostTemplate (show newest)
+    putStrLn ""
+    putStrLn ""
+
+    putStrLn "===================== devtalk.nvidia.com current releases ======================"
     showBranch verMap "Current releases" Current
     showBranch verMap "Legacy releases for GeForce 8 and 9 series GPUs" R340_00
     showBranch verMap "Legacy releases for GeForce 6 and 7 series GPUs" R304_00
@@ -147,14 +152,13 @@ main = do
                " for more details.[/i]"
     putStrLn ""
 
-    let (_, newest) = Map.findMax verMap
     putStr "Please see [URL=\"http://us.download.nvidia.com/XFree86/Linux-x86/"
     putStr (show newest)
     putStrLn "/README/supportedchips.html\"]Appendix A[/URL] of the README to determine which driver you need for your GPU."
+    putStrLn ""
+    putStrLn ""
 
-    generateForumPostTemplate (show newest)
-
-    putStrLn "====================== IRC topic ======================="
+    putStrLn "================================== IRC topic ==================================="
     putStr "/topic "
     putStr "UNOFFICIAL NVIDIA Linux/FreeBSD/Solaris Graphics Driver Support | Releases: "
     printIRCTopic verMap
