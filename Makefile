@@ -4,7 +4,8 @@ validate: .validate-stamp
 upload: .upload-stamp
 
 clean::
-	$(RM) .upload-stamp .validate-stamp validate-versions generate-stuff *.o *.hi
+	$(RM) .upload-stamp .validate-stamp validate-versions generate-stuff \
+	      generate-htaccess .htaccess *.o *.hi
 
 .PHONY: validate stuff upload clean
 
@@ -18,14 +19,12 @@ upload_files := .htaccess
 	@./validate-versions
 	@touch $@
 
-validate-versions: NVVersionParser.hs validate-versions.hs
+% : %.hs
 	ghc --make $@
 
-generate-stuff: NVVersionParser.hs generate-stuff.hs URLs.hs
-	ghc --make $@
-
-generate-htaccess: NVVersionParser.hs generate-htaccess.hs
-	ghc --make $@
+validate-versions: NVVersionParser.hs
+generate-stuff: NVVersionParser.hs URLs.hs
+generate-htaccess: NVVersionParser.hs
 
 .htaccess: generate-htaccess nvidia-versions.txt
 	./generate-htaccess > $@
