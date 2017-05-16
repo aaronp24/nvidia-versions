@@ -106,7 +106,7 @@ generateForumPostTemplate ver = do
     putStrLn "Release highlights since <VERSION>:"
     putStrLn "[list]"
     putStrLn "[/.][/list]"
-    let server = "https://http.download.nvidia.com/"
+    let server = "https://download.nvidia.com/"
     let platforms =
           [
             ("XFree86/Linux-x86",       "Linux-x86",              ".run",    "Linux x86"),
@@ -152,7 +152,7 @@ main = do
                " for more details.[/i]"
     putStrLn ""
 
-    putStr "Please see [URL=\"https://http.download.nvidia.com/XFree86/Linux-x86/"
+    putStr "Please see [URL=\"https://download.nvidia.com/XFree86/Linux-x86/"
     putStr (show newest)
     putStrLn "/README/supportedchips.html\"]Appendix A[/URL] of the README to determine which driver you need for your GPU."
     putStrLn ""
@@ -162,6 +162,6 @@ main = do
     putStr "/topic "
     putStr "UNOFFICIAL NVIDIA Linux/FreeBSD/Solaris Graphics Driver Support | Releases: "
     printIRCTopic verMap
-    putStr " | https://http.download.nvidia.com/XFree86 | DO NOT FLOOD! (use "
+    putStr " | https://download.nvidia.com/XFree86 | DO NOT FLOOD! (use "
     putStr "https://gist.github.com) | try to use your distribution's driver "
     putStrLn "packages | Have you tried nvidia-settings?"
