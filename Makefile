@@ -20,7 +20,7 @@ upload_files := .htaccess
 	@touch $@
 
 % : %.hs
-	ghc --make $@
+	ghc --make -dynamic $@
 
 validate-versions: NVVersionParser.hs
 generate-stuff: NVVersionParser.hs URLs.hs
