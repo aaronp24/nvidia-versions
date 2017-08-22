@@ -121,7 +121,7 @@ generateForumPostTemplate ver = do
            ver ++ suffix,
            userString)
     let stringPairs =
-          (server ++ "XFree86/Linux-x86/" ++ ver ++ "/README/index.html", "README") :
+          (server ++ "XFree86/Linux-x86_64/" ++ ver ++ "/README/index.html", "README") :
           (map platformToStringPair platforms)
     let urlStrings = map (uncurry linkTo) stringPairs
 
@@ -152,7 +152,7 @@ main = do
                " for more details.[/i]"
     putStrLn ""
 
-    putStr "Please see [URL=\"https://download.nvidia.com/XFree86/Linux-x86/"
+    putStr "Please see [URL=\"https://download.nvidia.com/XFree86/Linux-x86_64/"
     putStr (show newest)
     putStrLn "/README/supportedchips.html\"]Appendix A[/URL] of the README to determine which driver you need for your GPU."
     putStrLn ""
