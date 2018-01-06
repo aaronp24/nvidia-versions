@@ -142,7 +142,7 @@ main = do
     putStrLn "===================== devtalk.nvidia.com current releases ======================"
     showBranch verMap "Current releases" Current
     showBranch verMap "Legacy releases for GeForce 8 and 9 series GPUs" R340_00
-    showBranch verMap "Legacy releases for GeForce 6 and 7 series GPUs" R304_00
+    showBranch verMap "Legacy releases for GeForce 6 and 7 series GPUs (*)" R304_00
     showBranch verMap "Legacy releases for GeForce 5 series GPUs (*)" R173_14
     showBranch verMap "Legacy releases for GeForce 2 through GeForce 4 series GPUs (*)" L9622
     showBranch verMap "Legacy releases for Riva TNT, TNT2, GeForce, and some GeForce 2 GPUs (*)" L7160

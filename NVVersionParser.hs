@@ -9,7 +9,7 @@ import Data.List
 
 data Branch = L7160 | L9622 | R173_14 | R304_00 | R340_00 | Current
   deriving (Show, Eq, Ord)
-supportedLegacyBranches = [R304_00, R340_00]
+supportedLegacyBranches = [R340_00]
 
 data Maturity = LongLivedBranchRelease | Official | Prerelease | Beta
   deriving (Show, Eq, Ord)
