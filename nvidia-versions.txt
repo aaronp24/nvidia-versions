@@ -10,7 +10,7 @@
 # branch maturity version
 current beta 390.12
 current official 387.34
-current long-lived-branch-release 384.98
+current long-lived-branch-release 384.111
 340 official 340.104
 304 official 304.137
 173.14 official 173.14.39
