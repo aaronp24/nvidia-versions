@@ -11,7 +11,7 @@
 current beta 390.12
 current official 387.34
 current long-lived-branch-release 384.111
-340 official 340.104
+340 official 340.106
 304 official 304.137
 173.14 official 173.14.39
 96.43 official 96.43.23
