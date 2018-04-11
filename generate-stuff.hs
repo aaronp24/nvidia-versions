@@ -105,11 +105,8 @@ generateForumPostTemplate ver = do
     let server = "https://download.nvidia.com/"
     let platforms =
           [
-            ("XFree86/Linux-x86",       "Linux-x86",              ".run",    "Linux x86"),
             ("XFree86/Linux-x86_64",    "Linux-x86_64",           ".run",    "Linux x86_64"),
-            ("XFree86/Linux-32bit-ARM", "Linux-armv7l-gnueabihf", ".run",    "Linux ARM"),
             ("solaris",                 "Solaris-x86",            ".run",    "Solaris"),
-            ("XFree86/FreeBSD-x86",     "FreeBSD-x86",            ".tar.gz", "FreeBSD x86"),
             ("XFree86/FreeBSD-x86_64",  "FreeBSD-x86_64",         ".tar.gz", "FreeBSD x86_64")
           ]
     let platformToStringPair (dirName, platName, suffix, userString) =
