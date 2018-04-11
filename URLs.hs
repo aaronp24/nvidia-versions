@@ -345,54 +345,48 @@ nvnewsUrls = fromList [
 
 geforce ver x86 amd64 =
     (Version ver,
-     ("http://www.geforce.com/drivers/results/" ++ show x86,
-      "http://www.geforce.com/drivers/results/" ++ show amd64,
-      Nothing))
+     [("http://www.geforce.com/drivers/results/" ++ show x86,                               "x86"),
+      ("http://www.geforce.com/drivers/results/" ++ show amd64,                             "x86_64")])
 
 withArm ver =
     (Version ver,
-     ("http://www.nvidia.com/object/linux-display-ia32-" ++ ver ++ "-driver.html",
-      "http://www.nvidia.com/object/linux-display-amd64-" ++ ver ++ "-driver.html",
-      Just ("http://www.nvidia.com/object/linux-display-32bit-arm-" ++ ver ++ "-driver.html")))
+     [("http://www.nvidia.com/object/linux-display-ia32-" ++ ver ++ "-driver.html",         "x86"),
+      ("http://www.nvidia.com/object/linux-display-amd64-" ++ ver ++ "-driver.html",        "x86_64"),
+      ("http://www.nvidia.com/object/linux-display-32bit-arm-" ++ ver ++ "-driver.html",    "ARM")])
 
 dashdv ver =
     (Version ver,
-     ("http://www.nvidia.com/object/linux-display-ia32-" ++ ver ++ "-driver.html",
-      "http://www.nvidia.com/object/linux-display-amd64-" ++ ver ++ "-driver.html",
-      Nothing))
+     [("http://www.nvidia.com/object/linux-display-ia32-" ++ ver ++ "-driver.html",         "x86"),
+      ("http://www.nvidia.com/object/linux-display-amd64-" ++ ver ++ "-driver.html",        "x86_64")])
 
 dashes ver =
     (Version ver,
-     ("http://www.nvidia.com/object/linux-display-ia32-" ++ ver ++ ".html",
-      "http://www.nvidia.com/object/linux-display-amd64-" ++ ver ++ ".html",
-      Nothing))
+     [("http://www.nvidia.com/object/linux-display-ia32-" ++ ver ++ ".html",                "x86"),
+      ("http://www.nvidia.com/object/linux-display-amd64-" ++ ver ++ ".html",               "x86_64")])
 
 nvidia foo ver =
     (Version ver,
-     ("http://www.nvidia.com/object/linux_display_" ++ foo ++ "_" ++ ver ++ ".html",
-      "http://www.nvidia.com/object/linux_display_amd64_" ++ ver ++ ".html",
-      Nothing))
+     [("http://www.nvidia.com/object/linux_display_" ++ foo ++ "_" ++ ver ++ ".html",       "x86"),
+      ("http://www.nvidia.com/object/linux_display_amd64_" ++ ver ++ ".html",               "x86_64")])
 
 ancient ver =
     (Version ver,
-     ("http://www.nvidia.com/object/linux_display_" ++ ver ++ ".html", "n/a",
-     Nothing))
+     [("http://www.nvidia.com/object/linux_display_" ++ ver ++ ".html",                     "x86")])
 
 reallyAncient ver =
     (Version ver,
-     ("http://www.nvidia.com/object/linux_v" ++ ver ++ ".html", "n/a", Nothing))
+     [("http://www.nvidia.com/object/linux_v" ++ ver ++ ".html",                            "x86")])
 
 dr ver x86 amd64 arm =
     (Version ver,
-     ("http://www.nvidia.com/Download/driverResults.aspx/" ++ show x86 ++ "/en-us",
-      "http://www.nvidia.com/Download/driverResults.aspx/" ++ show amd64 ++ "/en-us",
-      Just ("http://www.nvidia.com/Download/driverResults.aspx/" ++ show arm ++ "/en-us")))
+     [("http://www.nvidia.com/Download/driverResults.aspx/" ++ show x86 ++ "/en-us",        "x86"),
+      ("http://www.nvidia.com/Download/driverResults.aspx/" ++ show amd64 ++ "/en-us",      "x86_64"),
+      ("http://www.nvidia.com/Download/driverResults.aspx/" ++ show arm ++ "/en-us",        "ARM")])
 
 drNoArm ver x86 amd64 =
     (Version ver,
-     ("http://www.nvidia.com/Download/driverResults.aspx/" ++ show x86 ++ "/en-us",
-      "http://www.nvidia.com/Download/driverResults.aspx/" ++ show amd64 ++ "/en-us",
-      Nothing))
+     [("http://www.nvidia.com/Download/driverResults.aspx/" ++ show x86 ++ "/en-us",        "x86"),
+      ("http://www.nvidia.com/Download/driverResults.aspx/" ++ show amd64 ++ "/en-us",      "x86_64")])
 
 nvidiaUrls = fromList [
     nvidia "ia32"           "100.14.03",
@@ -477,8 +471,10 @@ nvidiaUrls = fromList [
     dashdv                  "195.36.31",
     dashes                  "256.25",
     dashdv                  "256.35",
-    (Version                "256.38.02", ("http://developer.download.nvidia.com/opengl/4.1/linux/NVIDIA-Linux-x86-256.38.02.run", "http://developer.download.nvidia.com/opengl/4.1/linux/NVIDIA-Linux-x86_64-256.38.02.run", Nothing)),
-    (Version                "256.38.03", ("http://developer.download.nvidia.com/opengl/4.1/linux/NVIDIA-Linux-x86-256.38.03.run", "http://developer.download.nvidia.com/opengl/4.1/linux/NVIDIA-Linux-x86_64-256.38.03.run", Nothing)),
+    (Version                "256.38.02", [("x86", "http://developer.download.nvidia.com/opengl/4.1/linux/NVIDIA-Linux-x86-256.38.02.run"),
+                                          ("x86_64", "http://developer.download.nvidia.com/opengl/4.1/linux/NVIDIA-Linux-x86_64-256.38.02.run")]),
+    (Version                "256.38.03", [("x86", "http://developer.download.nvidia.com/opengl/4.1/linux/NVIDIA-Linux-x86-256.38.03.run"),
+                                          ("x86_64", "http://developer.download.nvidia.com/opengl/4.1/linux/NVIDIA-Linux-x86_64-256.38.03.run")]),
     dashdv                  "256.44",
     dashdv                  "256.53",
     dashdv                  "260.19.12",
