@@ -347,7 +347,8 @@ nvnewsUrls = fromList [
     devtalk"390.77"             1037553,
     devtalk"396.18"             1032146,
     devtalk"396.24"             1032986,
-    devtalk"396.45"             1037689
+    devtalk"396.45"             1037689,
+    devtalk"396.51"             1038166
  ]
 
 geforce ver x86 amd64 =
@@ -651,6 +652,7 @@ nvidiaUrls = fromList [
     dr64                    "396.18" 133571,
     dr64                    "396.24" 133859,
     dr64                    "396.45" 136233,
+    dr64                    "396.51" 136888,
     nvidia "x86"            "71.86.04",
     nvidia "x86"            "71.86.09",
     nvidia "ia32"           "71.86.11",
