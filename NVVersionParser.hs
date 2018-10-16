@@ -7,9 +7,9 @@ import Data.List
 
 -- Data type
 
-data Branch = L7160 | L9622 | R173_14 | R304_00 | R340_00 | Current
+data Branch = L7160 | L9622 | R173_14 | R304_00 | R340_00 | R390_00 | Current
   deriving (Show, Eq, Ord)
-supportedLegacyBranches = [R340_00]
+supportedLegacyBranches = [R340_00, R390_00]
 
 data Maturity = LongLivedBranchRelease | Official | Prerelease | Beta
   deriving (Show, Eq, Ord)
@@ -72,6 +72,7 @@ parseBranch = do
     word <- parseWord
     case word of
         "current" -> return Current
+        "390"     -> return R390_00
         "340"     -> return R340_00
         "304"     -> return R304_00
         "173.14"  -> return R173_14
