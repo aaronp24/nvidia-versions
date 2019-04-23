@@ -40,14 +40,17 @@ linkTo url str = linkTag url ++ str ++ "[/url]"
 -- nvidia URL map.
 printVerLine verMap name key =
     doLookup key verMap (\ver -> do
-        putStr name
-        putStr ": "
+        case name of
+          "" -> return ()
+          _ -> putStr name >> putStr ": "
         doWithUrl ver nvnewsUrls (putStr (show ver))
         doLookup ver nvidiaUrls (\archUrls -> do
             let archLinks = map (uncurry linkTo) archUrls
             putStr $ " (" ++ intercalate " / " archLinks ++ ")"
          )
-        putStrLn ""
+        case name of
+          "" -> return ()
+          _ -> putStrLn ""
      )
 
 -- Print the current official, prerelease, and beta versions from the
@@ -61,6 +64,23 @@ showBranch verMap heading br = do
         ("Current beta release", Beta)
      ]
     putStrLn ""
+
+-- Print the latest releases from each of the legacy branches.
+showLegacy verMap = do
+    putStrLn $ "[b]Legacy releases[/b]"
+    mapM_ (\(br, label) -> do
+        printVerLine verMap "" (br, Official)
+        putStr " - "
+        putStr label
+        if not (br `elem` supportedLegacyBranches)
+            then putStr " (*)"
+            else return ()
+        putStrLn "")
+      legacyBranchLabels
+    putStrLn $ "(*) [i]These releases are no longer being maintained.  Please see " ++
+               linkTo "http://nvidia.custhelp.com/app/answers/detail/a_id/3142"
+                      "Support timeframes for Unix legacy GPU releases" ++
+               " for more details.[/i]"
 
 -- Print the IRC version list.  Example:
 --     beta: 185.13, prerelease: 180.41, legacy: 173.14.18, 96.43.11, 71.86.09
@@ -134,16 +154,7 @@ main = do
 
     putStrLn "===================== devtalk.nvidia.com current releases ======================"
     showBranch verMap "Current releases" Current
-    showBranch verMap "Legacy releases for GF1xx \"Fermi\" GPUs" R390_00
-    showBranch verMap "Legacy releases for GeForce 8 and 9 series GPUs" R340_00
-    showBranch verMap "Legacy releases for GeForce 6 and 7 series GPUs (*)" R304_00
-    showBranch verMap "Legacy releases for GeForce 5 series GPUs (*)" R173_14
-    showBranch verMap "Legacy releases for GeForce 2 through GeForce 4 series GPUs (*)" L9622
-    showBranch verMap "Legacy releases for Riva TNT, TNT2, GeForce, and some GeForce 2 GPUs (*)" L7160
-    putStrLn $ "(*) [i]These releases are no longer being maintained.  Please see " ++
-               linkTo "http://nvidia.custhelp.com/app/answers/detail/a_id/3142"
-                      "Support timeframes for Unix legacy GPU releases" ++
-               " for more details.[/i]"
+    showLegacy verMap
     putStrLn ""
 
     putStr "Please see [URL=\"https://download.nvidia.com/XFree86/Linux-x86_64/"

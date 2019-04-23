@@ -1,6 +1,6 @@
 module NVVersionParser (
     Driver(..), Branch(..), Maturity(..), Version(..),
-    parseVersionFile, supportedLegacyBranches
+    parseVersionFile, legacyBranchLabels, supportedLegacyBranches
 ) where
 import Text.ParserCombinators.Parsec
 import Data.List
@@ -9,6 +9,14 @@ import Data.List
 
 data Branch = L7160 | L9622 | R173_14 | R304_00 | R340_00 | R390_00 | Current
   deriving (Show, Eq, Ord)
+legacyBranchLabels = [
+    (R390_00, "GF1xx \"Fermi\" GPUs"),
+    (R340_00, "GeForce 8 and 9 series GPUs"),
+    (R304_00, "GeForce 6 and 7 series GPUs"),
+    (R173_14, "GeForce 5 series GPUs"),
+    (L9622,   "GeForce 2 through GeForce 4 series GPUs"),
+    (L7160,   "Riva TNT, TNT2, GeForce, and some GeForce 2 GPUs")
+  ]
 supportedLegacyBranches = [R340_00, R390_00]
 
 data Maturity = LongLivedBranchRelease | Official | Prerelease | Beta
