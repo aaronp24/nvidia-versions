@@ -28,22 +28,20 @@ A typical driver release consists of the following steps:
     `nvnewsUrls` map.  Try to keep this list roughly sorted, just for
     aesthetics.
 
-5.  Link to the forum post from Google+.
-
-6.  Add a line for the new driver to the `nvidiaUrls` map in URLs.hs.  Use the
+5.  Add a line for the new driver to the `nvidiaUrls` map in URLs.hs.  Use the
     appropriate helper function for the URL scheme used by this release, or add
     a new one if necessary.
 
-7.  Run `make` again.  This rebuilds the parser then generates the contents of
+6.  Run `make` again.  This rebuilds the parser then generates the contents of
     the "Current graphics driver releases" forum post and a /topic command
     suitable for pasting into the #nvidia channel on FreeNode.
 
-8.  Edit the post at https://devtalk.nvidia.com/default/topic/533434
+7.  Edit the post at https://devtalk.nvidia.com/default/topic/533434
 
     Paste the text generated in the previous step into the first post in that
     thread.  Verify that all of the links work.
 
-9.  Unlock the thread and post a reply to it linking to the announcement forum
+8.  Unlock the thread and post a reply to it linking to the announcement forum
     post.  This marks the "Current graphics driver releases" thread as unread
     for people viewing the forum, so they know that a new release has been made.
 
@@ -55,9 +53,9 @@ A typical driver release consists of the following steps:
 
     *Don't forget to re-lock the thread when you're done!*
 
-10. Commit your change and push it to GitHub.
+9.  Commit your change and push it to GitHub.
 
-11. For each of `nvidia-settings`, `nvidia-xconfig`, `nvidia-installer`,
+10. For each of `nvidia-settings`, `nvidia-xconfig`, `nvidia-installer`,
     `nvidia-modprobe`, and `nvidia-persistenced`, unpack the release tarballs
     and commit, tag, and push the changes:
 
@@ -71,4 +69,4 @@ A typical driver release consists of the following steps:
         git tag <version>
         git push github master <version>
 
-12. Update the changelog to add a release date line for this release.
+11. Update the changelog to add a release date line for this release.
