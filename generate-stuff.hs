@@ -73,14 +73,14 @@ showLegacy verMap = do
         putStr " - "
         putStr label
         if not (br `elem` supportedLegacyBranches)
-            then putStr " (*)"
+            then putStr " (*\x200b)"
             else return ()
         putStrLn "")
       legacyBranchLabels
-    putStrLn $ "(*) [i]These releases are no longer being maintained.  Please see " ++
+    putStrLn $ "<small>(*\x200b) <i>These releases are no longer being maintained.  Please see " ++
                linkTo "http://nvidia.custhelp.com/app/answers/detail/a_id/3142"
                       "Support timeframes for Unix legacy GPU releases" ++
-               " for more details.[/i]"
+               " for more details.</i></small>"
 
 -- Print the IRC version list.  Example:
 --     beta: 185.13, prerelease: 180.41, legacy: 173.14.18, 96.43.11, 71.86.09
