@@ -152,7 +152,7 @@ main = do
     putStrLn ""
     putStrLn ""
 
-    putStrLn "===================== devtalk.nvidia.com current releases ======================"
+    putStrLn "================= forums.developer.nvidia.com current releases ================="
     showBranch verMap "Current releases" Current
     showLegacy verMap
     putStrLn ""

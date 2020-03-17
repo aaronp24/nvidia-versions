@@ -22,7 +22,7 @@ A typical driver release consists of the following steps:
 
 3.  Diff the changelog from the previous release to generate a list of changes.
     Manually format this and post an annoucement at
-    https://devtalk.nvidia.com/default/board/99/
+    https://forums.developer.nvidia.com/c/gpu-unix-graphics/announcements-and-news/
 
 4.  Record the post ID and add a line to URLs.hs for that post in the
     `nvnewsUrls` map.  Try to keep this list roughly sorted, just for
@@ -36,7 +36,7 @@ A typical driver release consists of the following steps:
     the "Current graphics driver releases" forum post and a /topic command
     suitable for pasting into the #nvidia channel on FreeNode.
 
-7.  Edit the post at https://devtalk.nvidia.com/default/topic/533434
+7.  Edit the post at https://forums.developer.nvidia.com/t/current-graphics-driver-releases/28500
 
     Paste the text generated in the previous step into the first post in that
     thread.  Verify that all of the links work.
@@ -48,8 +48,8 @@ A typical driver release consists of the following steps:
     Delete any posts in the thread that are stale.  For example, delete posts
     announcing earlier releases in the same release branch, but leave the post
     announcing the latest long-lived branch release.  Users can always look at
-    https://devtalk.nvidia.com/default/board/99/ to find old release
-    announcements.
+    https://forums.developer.nvidia.com/c/gpu-unix-graphics/announcements-and-news/
+    to find old release announcements.
 
     *Don't forget to re-lock the thread when you're done!*
 
