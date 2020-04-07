@@ -120,8 +120,7 @@ generateForumPostTemplate ver = do
     putStrLn "============================= Forum post template =============================="
 
     putStrLn "Release highlights since <VERSION>:"
-    putStrLn "[list]"
-    putStrLn "[/.][/list]"
+    putStrLn ""
     let server = "https://download.nvidia.com/"
     let platforms =
           [
