@@ -17,7 +17,8 @@ nvnewsUrls = fromList [
     forum       "440.82"            118864,
     forum       "440.100"           129492,
     forum       "450.51"            129482,
-    forum       "450.57"            141197
+    forum       "450.57"            141197,
+    forum       "450.66"            147366
  ]
 
 geforce ver x86 amd64 =
@@ -362,6 +363,7 @@ nvidiaUrls = fromList [
     dr64                    "440.100" 160175,
     dr64                    "450.51"  160555,
     dr64                    "450.57"  162107,
+    dr64                    "450.66"  163238,
     nvidia "x86"            "71.86.04",
     nvidia "x86"            "71.86.09",
     nvidia "ia32"           "71.86.11",
