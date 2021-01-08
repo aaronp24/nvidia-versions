@@ -19,7 +19,7 @@ legacyBranchLabels = [
   ]
 supportedLegacyBranches = [R390_00]
 
-data Maturity = LongLivedBranchRelease | Official | Prerelease | Beta
+data Maturity = LongLivedBranchRelease | Official | Beta
   deriving (Show, Eq, Ord)
 newtype Version = Version String
   deriving Eq
@@ -91,7 +91,6 @@ parseBranch = do
 parseMaturity =
     (string "long-lived-branch-release" >> return LongLivedBranchRelease) <|>
     (string "official" >> return Official) <|>
-    (string "prerelease" >> return Prerelease) <|>
     (string "beta" >> return Beta)
 
 parseVersion = do

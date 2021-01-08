@@ -53,14 +53,13 @@ printVerLine verMap name key =
           _ -> putStrLn ""
      )
 
--- Print the current official, prerelease, and beta versions from the
+-- Print the current production, new feature, and beta versions from the
 -- given release branch.  If any of these don't exist, just skip them.
 showBranch verMap heading br = do
     putStrLn $ "[b]" ++ heading ++ "[/b]"
     mapM_ (\(name, mat) -> printVerLine verMap name (br, mat)) [
-        ("Current long-lived branch release", LongLivedBranchRelease),
-        ("Current official release", Official),
-        ("Current prerelease", Prerelease),
+        ("Current production branch release", LongLivedBranchRelease),
+        ("Current new feature branch release", Official),
         ("Current beta release", Beta)
      ]
     putStrLn ""
@@ -93,17 +92,12 @@ printIRCTopic verMap = do
         putStr (show ver)
         putStr ", "
      )
-    case Map.lookup (Current, Prerelease) verMap of
+    case Map.lookup (Current, Official) verMap of
         Just ver -> do
-            putStr "prerelease: "
+            putStr "official: "
             putStr (show ver)
             putStr ", "
-        Nothing -> case Map.lookup (Current, Official) verMap of
-            Just ver -> do
-                putStr "official: "
-                putStr (show ver)
-                putStr ", "
-            Nothing -> return ()
+        Nothing -> return ()
     let legacyVers = map (findNewestInBranch verMap) supportedLegacyBranches
     when (not (null legacyVers)) $ do
         putStr "legacy: "
