@@ -8,6 +8,7 @@
 # Plattner do not guarantee the accuracy of its contents.
 #
 # branch maturity version
+current beta 470.42.01
 current official 465.31
 current long-lived-branch-release 460.84
 390 official 390.143

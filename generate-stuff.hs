@@ -120,7 +120,7 @@ generateForumPostTemplate ver = do
           [
             ("XFree86/Linux-x86_64",    "Linux-x86_64",           ".run",    "Linux x86_64"),
             ("solaris",                 "Solaris-x86",            ".run",    "Solaris"),
-            ("XFree86/FreeBSD-x86_64",  "FreeBSD-x86_64",         ".tar.gz", "FreeBSD x86_64")
+            ("XFree86/FreeBSD-x86_64",  "FreeBSD-x86_64",         ".tar.xz", "FreeBSD x86_64")
           ]
     let platformToStringPair (dirName, platName, suffix, userString) =
           (server ++ dirName ++ "/" ++ ver ++ "/NVIDIA-" ++ platName ++ "-" ++
