@@ -7,9 +7,11 @@ import Data.List
 
 -- Data type
 
-data Branch = L7160 | L9622 | R173_14 | R304_00 | R340_00 | R390_00 | Current
+data Branch = L7160 | L9622 | R173_14 | R304_00 | R340_00 | R390_00 | R470_00
+            | Current
   deriving (Show, Eq, Ord)
 legacyBranchLabels = [
+    (R470_00, "GKxxx \"Kepler\" GPUs"),
     (R390_00, "GF1xx \"Fermi\" GPUs"),
     (R340_00, "GeForce 8 and 9 series GPUs"),
     (R304_00, "GeForce 6 and 7 series GPUs"),
@@ -17,7 +19,7 @@ legacyBranchLabels = [
     (L9622,   "GeForce 2 through GeForce 4 series GPUs"),
     (L7160,   "Riva TNT, TNT2, GeForce, and some GeForce 2 GPUs")
   ]
-supportedLegacyBranches = [R390_00]
+supportedLegacyBranches = [R470_00, R390_00]
 
 data Maturity = LongLivedBranchRelease | Official | Beta
   deriving (Show, Eq, Ord)
@@ -80,6 +82,7 @@ parseBranch = do
     word <- parseWord
     case word of
         "current" -> return Current
+        "470"     -> return R470_00
         "390"     -> return R390_00
         "340"     -> return R340_00
         "304"     -> return R304_00
