@@ -1,4 +1,4 @@
-module URLs (nvnewsUrls, nvidiaUrls) where
+module URLs (forumUrls, nvidiaUrls) where
 import NVVersionParser
 import Data.Map (Map, fromList, assocs)
 import Data.List
@@ -7,7 +7,7 @@ import Data.Maybe
 forum ver post =
     (Version ver, "https://forums.developer.nvidia.com/t/" ++ show post)
 
-nvnewsUrls = fromList [
+forumUrls = fromList [
     forum       "173.14.39"          31658,
     forum       "304.137"            53534,
     forum       "340.108"           109520,
@@ -439,20 +439,3 @@ nvidiaUrls = fromList [
     dashdv                  "96.43.20",
     dashdv                  "96.43.23"
  ]
-
-{-
-main = do
-    tf <- readFile "/mnt/rd/threads"
-    let threads = map (Thread . read) (lines tf)
-    pf <- readFile "/mnt/rd/posts"
-    let posts = map (Post . read) (lines pf)
-    let threadMap = fromList (zip threads posts)
-    putStrLn $ "<ul>"
-    let postTable = map (findPost threadMap) nvnewsUrls
-    let postTable' = sortBy (\a b -> compare (fst a) (fst b)) postTable
-    mapM_ printPost postTable'
- where
-    findPost threadMap (v, p@(Post _)) = (v, p)
-    findPost threadMap (v, t@(Thread _)) = (v, fromJust (Data.Map.lookup t threadMap))
-    printPost (Version v, Post p) = putStrLn $ "nvnews \"" ++ v ++ "\"\t\t" ++ show p ++ ","
--}

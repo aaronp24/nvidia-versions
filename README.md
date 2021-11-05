@@ -22,36 +22,32 @@ A typical driver release consists of the following steps:
 
 3.  Diff the changelog from the previous release to generate a list of changes.
     Manually format this and post an annoucement at
-    https://forums.developer.nvidia.com/c/gpu-unix-graphics/announcements-and-news/
+    https://forums.developer.nvidia.com/c/gpu-graphics/announcements-and-news/146
 
 4.  Record the post ID and add a line to URLs.hs for that post in the
-    `nvnewsUrls` map.  Try to keep this list roughly sorted, just for
-    aesthetics.
+    `forumUrls` map. Try to keep this list roughly sorted, just for aesthetics.
 
 5.  Add a line for the new driver to the `nvidiaUrls` map in URLs.hs.  Use the
     appropriate helper function for the URL scheme used by this release, or add
     a new one if necessary.
 
 6.  Run `make` again.  This rebuilds the parser then generates the contents of
-    the "Current graphics driver releases" forum post and a /topic command
-    suitable for pasting into the #nvidia channel on FreeNode.
+    the "Current graphics driver releases" forum post.
 
 7.  Edit the post at https://forums.developer.nvidia.com/t/current-graphics-driver-releases/28500
 
     Paste the text generated in the previous step into the first post in that
     thread.  Verify that all of the links work.
 
-8.  Unlock the thread and post a reply to it linking to the announcement forum
-    post.  This marks the "Current graphics driver releases" thread as unread
-    for people viewing the forum, so they know that a new release has been made.
+8.  Post a reply to the thread linking to the announcement forum post. This
+    marks the "Current graphics driver releases" thread as unread for people
+    viewing the forum, so they know that a new release has been made.
 
     Delete any posts in the thread that are stale.  For example, delete posts
     announcing earlier releases in the same release branch, but leave the post
     announcing the latest long-lived branch release.  Users can always look at
     https://forums.developer.nvidia.com/c/gpu-unix-graphics/announcements-and-news/
     to find old release announcements.
-
-    *Don't forget to re-lock the thread when you're done!*
 
 9.  Commit your change and push it to GitHub.
 
@@ -61,7 +57,6 @@ A typical driver release consists of the following steps:
 
         rm -r *
         tar --strip-components=1 -xvf /path/to/nvidia-whatever-<version>.tar.gz
-        rm src/libXNVCtrl/libXNVCtrl.a # for nvidia-settings
         git add -A
         git status
         git diff --cached

@@ -34,7 +34,7 @@ linkTo url str = linkTag url ++ str ++ "[/url]"
 
 -- Print a version line in the form
 --   name: ver (x86 / x86_64)
--- "ver" is a link to the nvnews post if one is found in the nvnews
+-- "ver" is a link to the forum post if one is found in the forum
 -- URL map.  "x86" and "x86_64" are links to the nvidia.com official
 -- release pages, and are only output if the version is found in the
 -- nvidia URL map.
@@ -43,7 +43,7 @@ printVerLine verMap name key =
         case name of
           "" -> return ()
           _ -> putStr name >> putStr ": "
-        doWithUrl ver nvnewsUrls (putStr (show ver))
+        doWithUrl ver forumUrls (putStr (show ver))
         doLookup ver nvidiaUrls (\archUrls -> do
             let archLinks = map (uncurry linkTo) archUrls
             putStr $ " (" ++ intercalate " / " archLinks ++ ")"
