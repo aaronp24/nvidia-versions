@@ -81,35 +81,6 @@ showLegacy verMap = do
                       "Support timeframes for Unix legacy GPU releases" ++
                " for more details.</i></small>"
 
--- Print the IRC version list.  Example:
---     beta: 185.13, prerelease: 180.41, legacy: 173.14.18, 96.43.11, 71.86.09
--- The algorithm is to list the current beta and prerelease versions.  If no
--- prerelease exists, use the latest official version.  For the legacy drivers,
--- just list the latest of each.
-printIRCTopic verMap = do
-    forM_ (Map.lookup (Current, Beta) verMap) (\ver -> do
-        putStr "beta: "
-        putStr (show ver)
-        putStr ", "
-     )
-    case Map.lookup (Current, Official) verMap of
-        Just ver -> do
-            putStr "official: "
-            putStr (show ver)
-            putStr ", "
-        Nothing -> return ()
-    let legacyVers = map (findNewestInBranch verMap) supportedLegacyBranches
-    when (not (null legacyVers)) $ do
-        putStr "legacy: "
-        putStr (concat (intersperse ", " (map show legacyVers)))
- where
-    findNewestInBranch verMap br =
-        let branchMap = Map.filterWithKey isInBranch verMap
-            (_, ver) = Map.findMax branchMap
-            isInBranch (br2, _) _ = br == br2
-         in
-            ver
-
 generateForumPostTemplate ver = do
     putStrLn "============================= Forum post template =============================="
 
@@ -155,11 +126,3 @@ main = do
     putStrLn "/README/supportedchips.html\"]Appendix A[/URL] of the README to determine which driver you need for your GPU."
     putStrLn ""
     putStrLn ""
-
-    putStrLn "================================== IRC topic ==================================="
-    putStr "/topic "
-    putStr "UNOFFICIAL NVIDIA Linux/FreeBSD/Solaris Graphics Driver Support | Releases: "
-    printIRCTopic verMap
-    putStr " | https://download.nvidia.com/XFree86 | DO NOT FLOOD! (use "
-    putStr "https://gist.github.com) | try to use your distribution's driver "
-    putStrLn "packages | Have you tried nvidia-settings?"
