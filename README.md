@@ -10,8 +10,8 @@ updates to the NVIDIA Linux graphics drivers.
 A typical driver release consists of the following steps:
 
 1.  Edit nvidia-versions.txt to refer to the new driver.  Remember to remove
-    stale entries for beta drivers or old release branches that have been
-    superseded.
+    stale entries for old release branches that have been superseded.  Leave the
+    latest beta release even if a newer driver is available.
 
     If the current long-lived and official branches are the same, leave both
     entries but update them to the same version number.
