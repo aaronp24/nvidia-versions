@@ -99,7 +99,8 @@ generateForumPostTemplate ver = do
            userString)
     let stringPairs =
           (server ++ "XFree86/Linux-x86_64/" ++ ver ++ "/README/index.html", "README") :
-          (map platformToStringPair platforms)
+          (map platformToStringPair platforms) ++
+          [("https://github.com/NVIDIA/open-gpu-kernel-modules/releases/tag/" ++ ver, "Kernel driver source")]
     let urlStrings = map (uncurry linkTo) stringPairs
 
     putStr "["
