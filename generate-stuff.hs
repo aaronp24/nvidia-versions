@@ -14,7 +14,7 @@ toMap :: [Driver] -> Map Key Version
 toMap versions =
     Map.fromList (map split versions)
  where
-    split (Driver br mat ver) = ((br, mat), ver)
+    split (Driver ver br mat) = ((br, mat), ver)
 
 -- If key is a member of the given map, look it up and pass the result
 -- to a function that returns an IO action.  Otherwise, do nothing.
@@ -111,7 +111,7 @@ main = do
     Right versions <- parseVersionFile
     let verMap = toMap versions
     let showVer = printVerLine verMap
-    let (_, newest) = Map.findMax verMap
+    let (Driver newest _ _) = maximum versions
 
     generateForumPostTemplate (show newest)
     putStrLn ""

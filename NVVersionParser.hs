@@ -27,9 +27,9 @@ newtype Version = Version String
   deriving Eq
 
 data Driver = Driver {
+    version :: Version,
     branch :: Branch,
-    maturity :: Maturity,
-    version :: Version
+    maturity :: Maturity
 } deriving (Show, Eq, Ord)
 
 -- Version helper functions
@@ -74,7 +74,7 @@ versionEntry = do
     space
     ver <- parseVersion
     manyTill anyChar newline
-    return (Driver br mat ver)
+    return (Driver ver br mat)
 
 parseWord = many1 (alphaNum <|> oneOf "._")
 
