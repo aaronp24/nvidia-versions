@@ -10,7 +10,7 @@ toMap :: [Driver] -> Map Key Version
 toMap versions =
     Map.fromList (map split versions)
  where
-    split (Driver br mat ver) = ((br, mat), ver)
+    split (Driver ver br mat) = ((br, mat), ver)
 
 main = do
     Right versions <- parseVersionFile
