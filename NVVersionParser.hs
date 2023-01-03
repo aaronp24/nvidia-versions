@@ -19,7 +19,7 @@ legacyBranchLabels = [
     (L9622,   "GeForce 2 through GeForce 4 series GPUs"),
     (L7160,   "Riva TNT, TNT2, GeForce, and some GeForce 2 GPUs")
   ]
-supportedLegacyBranches = [R470_00, R390_00]
+supportedLegacyBranches = [R470_00]
 
 data Maturity = LongLivedBranchRelease | Official | Beta
   deriving (Show, Eq, Ord)
