@@ -135,20 +135,22 @@ reallyAncient ver =
     (Version ver,
      [("http://www.nvidia.com/object/linux_v" ++ ver ++ ".html",                            "x86")])
 
+baseUrl = "https://www.nvidia.com/en-us/drivers/details/"
+
 dr ver x86 amd64 arm =
     (Version ver,
-     [("http://www.nvidia.com/Download/driverResults.aspx/" ++ show x86 ++ "/en-us",        "x86"),
-      ("http://www.nvidia.com/Download/driverResults.aspx/" ++ show amd64 ++ "/en-us",      "x86_64"),
-      ("http://www.nvidia.com/Download/driverResults.aspx/" ++ show arm ++ "/en-us",        "ARM")])
+     [(baseUrl ++ show x86,   "x86"),
+      (baseUrl ++ show amd64, "x86_64"),
+      (baseUrl ++ show arm,   "ARM")])
 
 drNoArm ver x86 amd64 =
     (Version ver,
-     [("http://www.nvidia.com/Download/driverResults.aspx/" ++ show x86 ++ "/en-us",        "x86"),
-      ("http://www.nvidia.com/Download/driverResults.aspx/" ++ show amd64 ++ "/en-us",      "x86_64")])
+     [(baseUrl ++ show x86,   "x86"),
+      (baseUrl ++ show amd64, "x86_64")])
 
 dr64 ver amd64 =
     (Version ver,
-     [("http://www.nvidia.com/Download/driverResults.aspx/" ++ show amd64 ++ "/en-us",      "x86_64")])
+     [(baseUrl ++ show amd64, "x86_64")])
 
 nvidiaUrls = fromList [
     nvidia "ia32"           "100.14.03",
