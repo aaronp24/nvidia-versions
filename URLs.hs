@@ -152,6 +152,11 @@ dr64 ver amd64 =
     (Version ver,
      [(baseUrl ++ show amd64, "x86_64")])
 
+dr64WithArm ver amd64 arm64 =
+    (Version ver,
+     [(baseUrl ++ show amd64,  "x86_64"),
+      (baseUrl ++ show arm64,  "aarch64")])
+
 nvidiaUrls = fromList [
     nvidia "ia32"           "100.14.03",
     nvidia "ia32"           "100.14.06",
@@ -567,6 +572,7 @@ nvidiaUrls = fromList [
     dr64                    "580.76.05" 252613,
     dr64                    "580.82.07" 253003,
     dr64                    "580.82.09" 254126,
+    dr64WithArm             "580.95.05" 254665 254667,
     nvidia "x86"            "71.86.04",
     nvidia "x86"            "71.86.09",
     nvidia "ia32"           "71.86.11",
