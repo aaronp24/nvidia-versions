@@ -588,6 +588,7 @@ nvidiaUrls = fromList [
     dr64WithArm             "595.45.04" 265309 265312,
     dr64WithArm             "595.58.03" 265870 265871,
     dr64WithArm             "595.71.05" 267223 267224,
+    dr64WithArm             "595.80" 271745 271746,
     dr64WithArm             "610.43.02" 271414 271415,
     nvidia "x86"            "71.86.04",
     nvidia "x86"            "71.86.09",
